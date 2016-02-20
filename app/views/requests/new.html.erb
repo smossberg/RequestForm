@@ -1,0 +1,8 @@
+<h1> New Request </h1>
+
+<%= form_for :request, url: requests_path do |obj| %>
+	<%= obj.text_field :title %>
+	<%= obj.text_area :text %>
+	<%= obj.submit %>
+<% end %>
+

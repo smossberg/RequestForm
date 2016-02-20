@@ -1,0 +1,15 @@
+<h1>Listing requests</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @requests.each do |request| %>
+    <tr>
+	<td><%= request.title %></td>
+      <td><%= request.text %></td>
+    </tr>
+  <% end %>
+</table>
