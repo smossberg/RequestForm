@@ -1,0 +1,11 @@
+<h1> New BC</h1>
+
+<%= form_for :business_context, url: business_contexts_path do |obj| %>
+	Description: <%= obj.text_area :description %><br>
+	As-Is Model: <%= obj.text_field :as_is_image %><br>
+	As-Is Description: <%= obj.text_area :as_is_description %><br>
+	To-Be Model: <%= obj.text_field :to_be_image %><br>
+	To-Be Description: <%= obj.text_area :to_be_description %><br>
+	<%= obj.submit %>
+<% end %>
+

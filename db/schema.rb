@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220120413) do
+ActiveRecord::Schema.define(version: 20160220160922) do
+
+  create_table "bcs", force: :cascade do |t|
+    t.text     "description"
+    t.string   "as_is_image"
+    t.string   "to_be_image"
+    t.integer  "request_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "bcs", ["request_id"], name: "index_bcs_on_request_id"
+
+  create_table "business_contexts", force: :cascade do |t|
+    t.text     "description"
+    t.string   "as_is_image"
+    t.text     "as_is_description"
+    t.string   "to_be_image"
+    t.text     "to_be_description"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "name"

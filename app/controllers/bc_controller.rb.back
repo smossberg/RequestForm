@@ -1,0 +1,19 @@
+class BusinessContextsController < ApplicationController
+	def index
+	end
+	def new
+	end
+	def create
+		@bc = BusinessContext.new(business_context_params)
+
+		@bc.save
+		redirect_to @bc 
+	end
+	def show
+		@bc = BusinessContext.find(params[:id])
+	end
+	private
+		def business_context_params
+			params.require(:business_context).permit(:as_is_imgage, :description, :as_is_description, :to_be_image, :to_be_description)
+		end
+end

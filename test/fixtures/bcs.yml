@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  as_is_image: MyString
+  to_be_image: MyString
+  request_id: 
+
+two:
+  description: MyText
+  as_is_image: MyString
+  to_be_image: MyString
+  request_id: 
