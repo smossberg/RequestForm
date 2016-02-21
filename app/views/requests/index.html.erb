@@ -8,8 +8,12 @@
  
   <% @requests.each do |request| %>
     <tr>
-	<td><%= request.title %></td>
-      <td><%= request.text %></td>
+	<td><%= request.name %></td>
+	<td><%= request.company %></td>
+	<td><%= request.description %></td>
+	<td><%= link_to 'Show', request_path(request) %> | </td>  
+	<td><%= link_to 'Edit', edit_request_path(request) %> | </td>
+	<td><%= link_to 'Destroy', request_path(request), method: :delete, data: {confirm: 'Are you sure you want to delete?'}  %> </td>
     </tr>
   <% end %>
 </table>

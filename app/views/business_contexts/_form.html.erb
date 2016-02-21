@@ -1,0 +1,30 @@
+<h1>Business Context</h1>
+
+<%= form_for  [@request,@bc] do |bc|  %>
+	<% if @bc.errors.any? %>
+		<div id="error">
+			<%= pluralize(@bc.errors.count, "error") %> 
+			<ul>
+				<% @bc.errors.full_message.each do |e| %>
+					<li><%= e %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<p>
+		<%= bc.label :description %>
+		<%= bc.text_area :description %>
+	</p>
+	<p>
+	<p>
+		<%= bc.label :as_is_image%>
+		<%= bc.text_area :as_is_image%>
+	</p>
+		<%= bc.label :to_be_image %>
+		<%= bc.text_area :to_be_image%>
+	</p>
+	<p>
+		<%= bc.submit %>
+	</p>
+<% end %>

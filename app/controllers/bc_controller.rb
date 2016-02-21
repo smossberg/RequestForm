@@ -4,10 +4,10 @@ class BcController < ApplicationController
 	def new
 	end
 	def create
-		@bc = Bc.new(business_context_params)
+		@request = Request.find(params[:request_id])
+		@bc = @request.bc.create(business_context_params)
 
-		@bc.save
-		redirect_to @bc 
+		redirect_to request_path(@request) 
 	end
 	def show
 		@bc = Bc.find(params[:id])

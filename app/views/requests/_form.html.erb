@@ -1,0 +1,32 @@
+<%= form_for @request do |obj| %>
+	<% if @request.errors.any? %>
+		<div id="error">
+		<%= pluralize(@request.errors.count, "error") %> errors.
+		<ul>
+			<% @request.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+		</div>
+	<% end %>
+	
+	<p>
+		<%= obj.label :name %><br>
+		<%= obj.text_field :name %><br>
+	</p>
+	<p>
+		<%= obj.label :company %><br>
+		<%= obj.text_area :company %><br>
+	</p>
+	<p>
+		<%= obj.label :owner %><br>
+		<%= obj.text_field :owner %><br>
+	</p>
+	<p>
+		<%= obj.label :creation_date %><br>
+		<%= obj.date_select :creation_date %><br>
+	</p>
+		
+	<%= obj.submit %>
+<% end %>
+

@@ -5,7 +5,8 @@
 	Creation date:	<%= @request.creation_date %><br>
 	<br>
 	<br>
-	Business Context:<br>
-	<%= @request.bc.description %>
+	<%= link_to 'Business Context', request_business_context_path(@request) %>
+	
 	
 </p>
+<%= link_to 'Edit', edit_request_path(@request) %>

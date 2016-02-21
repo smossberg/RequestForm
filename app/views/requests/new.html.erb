@@ -1,10 +1,4 @@
 <h1> New Request </h1>
 
-<%= form_for :request, url: requests_path do |obj| %>
-	Integrationname	<%= obj.text_field :name %><br>
-	Company: <%= obj.text_area :company %><br>
-	Project Manager: <%= obj.text_area :owner %><br>
-	Date: <%= obj.date_select :creation_date %><br>
-	<%= obj.submit %>
-<% end %>
-
+<%= render 'form' %>
+<%= link_to 'Back', requests_path %>

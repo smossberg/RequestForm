@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #get 'business_contexts/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,9 +15,10 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-resources :requests
-resources :business_contexts
-root 'welcome#index'
+resources :requests do 
+	resource :business_context
+end
+root 'requests#index'
   # Example resource route with options:
   #   resources :products do
   #     member do

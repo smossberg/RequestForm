@@ -1,0 +1,10 @@
+class BusinessContextsController < ApplicationController
+	def show
+		request = Request.find(params[:request_id])
+		@bc = request.business_context
+	end
+	def create
+	end
+	def upgrade
+	end
+end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BcTest < ActiveSupport::TestCase
+class BusinessContextTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
