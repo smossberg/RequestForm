@@ -1,19 +1,26 @@
 <h1>Listing requests</h1>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+<table class="table table-condensed table-hover">
+	<tr>
+		<thead>
+			<tr>
+			<th>Integration</th>
+			<th>Company</th>
+			<th>Owner</th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<tr>
+		</thead>
+	</tr>
   <% @requests.each do |request| %>
-    <tr>
-	<td><%= request.name %></td>
-	<td><%= request.company %></td>
-	<td><%= request.description %></td>
-	<td><%= link_to 'Show', request_path(request) %> | </td>  
-	<td><%= link_to 'Edit', edit_request_path(request) %> | </td>
-	<td><%= link_to 'Destroy', request_path(request), method: :delete, data: {confirm: 'Are you sure you want to delete?'}  %> </td>
-    </tr>
+	<tr>
+		<td><%= request.name %></td>
+		<td><%= request.company %></td>
+		<td><%= request.owner%></td>
+		<td><%= link_to 'Show', request_path(request), :class => 'btn btn-default' %>  </td>  
+		<td><%= link_to 'Edit', edit_request_path(request), :class => 'btn btn-default' %>  </td>
+		<td><%= link_to 'Destroy', request_path(request), method: :delete, data: {confirm: 'Are you sure you want to delete?'}, :class => 'btn btn-default'  %> </td>
+	</tr>
   <% end %>
 </table>
