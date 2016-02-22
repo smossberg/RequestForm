@@ -10,14 +10,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<div class="container navbar invert">
+			<h1>RequestForm</h1>
+		</div>
+	<header>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-8">
 				<%= render 'request_nav_bar' unless @disable_nav %>
 				<%= yield %>
-			</div>
-			<div class="col-sm-4" />
-		</div>
 	</div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
