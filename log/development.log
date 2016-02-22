@@ -17807,3 +17807,841 @@ Processing by RequestsController#index as HTML
   [1m[35mRequest Load (0.3ms)[0m  SELECT "requests".* FROM "requests"
   Rendered requests/index.html.erb within layouts/application (6.1ms)
 Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:00:10 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.3ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests"
+  Rendered requests/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:12 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:12 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:12 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:12 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.2ms)[0m  SELECT "requests".* FROM "requests"
+  Rendered requests/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:00:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:26 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.2ms)[0m  SELECT "requests".* FROM "requests"
+  Rendered requests/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:49 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:01:50 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.3ms)[0m  SELECT "requests".* FROM "requests"
+  Rendered requests/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:27 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:28 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[35mRequest Load (0.2ms)[0m  SELECT "requests".* FROM "requests"
+  Rendered requests/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:36 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#index as HTML
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests"[0m
+  Rendered requests/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/business_contexts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bc.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/business_contexts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 192.168.100.1 at 2016-02-22 21:05:37 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:05:57 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRequest Load (0.2ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:00 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mBusinessContext Load (0.2ms)[0m  SELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.9ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:01 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.5ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:03 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mBusinessContext Load (0.1ms)[0m  [1mSELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1[0m  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:03 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.2ms)
+  Rendered application/_request_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:04 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mBusinessContext Load (0.1ms)[0m  SELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:04 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_request_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:04 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mBusinessContext Load (0.1ms)[0m  [1mSELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1[0m  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.2ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:05 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.5ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:05 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mBusinessContext Load (0.1ms)[0m  SELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:05 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:06 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mBusinessContext Load (0.1ms)[0m  [1mSELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1[0m  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:06 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_request_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:07 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mBusinessContext Load (0.1ms)[0m  SELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.3ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:07 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.5ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/requests/12/business_context" for 192.168.100.1 at 2016-02-22 21:06:11 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BusinessContextsController#show as HTML
+  Parameters: {"request_id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mBusinessContext Load (0.1ms)[0m  [1mSELECT  "business_contexts".* FROM "business_contexts" WHERE "business_contexts"."request_id" = ? LIMIT 1[0m  [["request_id", 12]]
+  Rendered business_contexts/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_request_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/requests/12" for 192.168.100.1 at 2016-02-22 21:06:13 +0100
+Cannot render console from 192.168.100.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RequestsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT  "requests".* FROM "requests" WHERE "requests"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered requests/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_request_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
