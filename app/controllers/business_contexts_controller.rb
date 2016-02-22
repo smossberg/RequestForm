@@ -1,7 +1,7 @@
 class BusinessContextsController < ApplicationController
   def show
-	request = Request.find(params[:request_id])
-	@bc = request.business_context
+	@request = Request.find(params[:request_id])
+	@bc = @request.business_context
   end
 	def edit
 		@request = Request.find(params[:request_id])
