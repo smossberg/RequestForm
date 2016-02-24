@@ -22,7 +22,7 @@ class BusinessContextsController < ApplicationController
 
 	private 
 		def business_context_params
-			params.require(:business_context).permit(:description, :as_is_image, :to_be_image)
+			params.require(:business_context).permit(:description, :as_is_image, :to_be_image, custom_headings_attributes: [:id, :header, :description, :_destroy])
 			
 		end
 end

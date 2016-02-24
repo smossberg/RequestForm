@@ -1,6 +1,6 @@
 <h1>Business Context</h1>
 
-<%= form_for  [@request,@bc] do |bc|  %>
+<%= nested_form_for [@request,@bc] do |bc|  %>
 	<% if @bc.errors.any? %>
 		<div id="error">
 			<%= pluralize(@bc.errors.count, "error") %> 
@@ -32,7 +32,10 @@
 	<% @bc.custom_headings.each do |ch| %>
 	<div class="row">
 		<div class="col-sm-8">
-			<% render edit_custom_heading_path(ch.id) %>
+			<%= bc.fields_for :custom_headings do |ch_form| %>
+				<%= ch_form.text_field :header %>
+				<%= ch_form.link_to_remove "Remove this task" %>
+			<% end %>
 		</div>
 	</div>
 	<% end %>
