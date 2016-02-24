@@ -1,0 +1,3 @@
+För att vi vill kunna lägga till ett galleri till klassen..
+Få en standard form som bara är att rendera
+
