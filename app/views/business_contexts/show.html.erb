@@ -16,11 +16,11 @@
 	<p><%= @bc.to_be_image %></p>
     </div>
 </div>
-<% @bc.custom_headings.each do |ch| %>
+<% @bc.headings.each do |ch| %>
 <div class="row">
 	<div class="col-sm-8">
-		<h3><%= ch.header %></h3>
-		<p><%= ch.description %></p>
+		<h3><%= ch.title%></h3>
+		<p><%= ch.text %></p>
 	</div>
 </div>
 <% end %>

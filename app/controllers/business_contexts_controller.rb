@@ -24,7 +24,7 @@ class BusinessContextsController < ApplicationController
 		#OBS, custom_headings_attributes är för att tillåta CustomHeadings parametrar
 		#inget : framför! 
 		def business_context_params
-			params.require(:business_context).permit(:description, :as_is_image, :to_be_image, custom_headings_attributes: [:id, :header, :description, :_destroy])
+			params.require(:business_context).permit(:description, :as_is_image, :to_be_image, headings_attributes: [:id, :title, :text, :_destroy])
 			
 		end
 end

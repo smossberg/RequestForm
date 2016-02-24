@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223211836) do
+ActiveRecord::Schema.define(version: 20160224195335) do
 
   create_table "business_contexts", force: :cascade do |t|
     t.text     "description"
@@ -32,6 +32,17 @@ ActiveRecord::Schema.define(version: 20160223211836) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  create_table "headings", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "headerable_id"
+    t.string   "headerable_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "headings", ["headerable_type", "headerable_id"], name: "index_headings_on_headerable_type_and_headerable_id"
 
   create_table "requests", force: :cascade do |t|
     t.string   "name"

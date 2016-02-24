@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   #   resources :products
 resources :requests do 
 	resource :business_context do
-		resources :custom_headings, only: [:index, :new, :create]
+		resources :headings, only: [:index, :new, :create]
 	end
 end
-resources :custom_headings, only: [:show, :edit, :update, :destroy]
+resources :headings, only: [:show, :edit, :update, :destroy]
 
 root 'requests#index'
   # Example resource route with options:
