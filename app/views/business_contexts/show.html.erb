@@ -11,6 +11,13 @@
 	<h3>To-Be:</h3>
 	<p><%= @bc.to_be_image %></p>
     </div>
-  </div>
-
+</div>
+<% @bc.custom_headings.each do |ch| %>
+<div class="row">
+	<div class="col-sm-8">
+		<h3><%= ch.header %></h3>
+		<p><%= ch.description %></p>
+	</div>
+</div>
+<% end %>
 <%= link_to 'Edit' , edit_request_business_context_path %>

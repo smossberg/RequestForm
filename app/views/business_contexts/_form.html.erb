@@ -11,19 +11,31 @@
 			</ul>
 		</div>
 	<% end %>
-	
-	<p>
-		<%= bc.label :description %>
-		<%= bc.text_area :description %>
-	</p>
-	<p>
-	<p>
-		<%= bc.label :as_is_image%>
-		<%= bc.text_area :as_is_image%>
-	</p>
-		<%= bc.label :to_be_image %>
-		<%= bc.text_area :to_be_image%>
-	</p>
+	<div class="row">
+		<div class="col-sm-8">
+			<h3>Description</h3>
+			<%= bc.text_area :description %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+			<h3>As-Is</h3>
+			<%= bc.text_area :as_is_image %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+			<h3>To-Be</h3>
+			<%= bc.text_area :to_be_image %>
+		</div>
+	</div>
+	<% @bc.custom_headings.each do |ch| %>
+	<div class="row">
+		<div class="col-sm-8">
+			<% render edit_custom_heading_path(ch.id) %>
+		</div>
+	</div>
+	<% end %>
 	<p>
 		<%= bc.submit %>
 	</p>

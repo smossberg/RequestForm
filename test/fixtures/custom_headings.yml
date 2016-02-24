@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  header: MyString
+  description: MyText
+  ch_context_id: 1
+  ch_context_type: MyString
+
+two:
+  header: MyString
+  description: MyText
+  ch_context_id: 1
+  ch_context_type: MyString

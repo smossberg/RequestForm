@@ -1,0 +1,2 @@
+module CustomHeadingsHelper
+end

@@ -1,0 +1,6 @@
+<%= form_for @custom_heading, method: :patch do |f| %>
+	Header: <%= f.text_field :header %><br>
+	Description: <%= f.text_area :description %><br>
+	<%= f.submit %>
+<% end %>
+ 

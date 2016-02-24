@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221162424) do
+ActiveRecord::Schema.define(version: 20160223211836) do
 
   create_table "business_contexts", force: :cascade do |t|
     t.text     "description"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20160221162424) do
   end
 
   add_index "business_contexts", ["request_id"], name: "index_business_contexts_on_request_id"
+
+  create_table "custom_headings", force: :cascade do |t|
+    t.string   "header"
+    t.text     "description"
+    t.integer  "ch_context_id"
+    t.string   "ch_context_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "name"
