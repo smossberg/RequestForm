@@ -5,15 +5,15 @@ class CustomHeadingsController < ApplicationController
 		@custom_heading = CustomHeading.find(params[:id])
 		@disable_nav = true
 	end
+	# Behövs ingen new! Det sköts från de andra controllersen som CustomHeading tillhör
+	# Sker i ex business_context#update
 	def new
-		#context är den model/class som ska få en custom heading, dvs business context eller annat som har has_many :ch_type i sina modeller
-		#/requests/X/business_context ex.
-		@context = context
+		@context = find_context
 		@custom_heading = @context.custom_headings.new
 	end
 
 	def create 
-		@context = context
+		@context = find_context
 		@custom_heading = @context.custom_headings.new(custom_heading_params)
 		
 		if @custom_heading.save
@@ -27,12 +27,17 @@ class CustomHeadingsController < ApplicationController
 	end
 
 	def update
-		@context = context
+		@context = find_context
 		@custom_heading = @context.custom_headings.find(params[:id])
 
 		if @custom_heading.update_attributes(custom_heading_params)
 			redirect_to context_url(context)
 		end
+	end
+	
+	def destroy
+		custom_heading = CustomHeading.find(params[:id])
+		custom_heading.destroy
 	end
 
 	private
@@ -40,20 +45,11 @@ class CustomHeadingsController < ApplicationController
 		def custom_heading_params
 			params.require(:custom_heading).permit!
 		end
-	
-		def context
-			#if params[:business_context_id]
-			#	id = params[:business_context_id]
-			#	BusinessContext.find(params[:business_context_id])
-			#end
-			find_context
-		end
 		
-		def context_url(context)
-			if BusinessContext === context
-				business_context_path(context)
-			end
-		end
+		#MAGIC
+		#hittar vilken model det är
+		#ex. /requests/13/  business_context   /  5
+		#			context_type	context_id
 		def find_context
 			@klass = params[:ch_context_type].capitalize.constantize
 			@context = klass.find(params[:ch_context_id])
