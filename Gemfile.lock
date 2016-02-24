@@ -72,6 +72,8 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    nav_lynx (1.1.1)
+      rails (>= 3.1.0)
     nested_form (0.3.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -154,6 +156,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  nav_lynx (~> 1.1, >= 1.1.1)
   nested_form
   rails (= 4.2.5.1)
   rails-erd

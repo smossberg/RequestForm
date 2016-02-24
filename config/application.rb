@@ -22,5 +22,7 @@ module RequestForm
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+	#Vilken class som ska bli appendad av nav_lynx
+    config.nav_lynx.selected_class = 'active'
   end
 end
