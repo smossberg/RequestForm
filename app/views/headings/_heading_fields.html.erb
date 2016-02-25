@@ -1,0 +1,10 @@
+<%-# Får form_buildern |f| skickad till sig #-%>
+<%-# Detta är en partial #-%>
+
+<div class="row">
+	<div class="col-sm-8">
+	Heading: <%= f.text_field :title %> 
+	Text: <%= f.text_field :text %> 
+	<%= button_for f.link_to_remove "remove this heading" %>
+	</div>
+</div>
