@@ -30,21 +30,9 @@
 		</div>
 	</div>
 	<%= bc.fields_for :headings %>
-	<div class="row" >
-		<div class="col-sm-8" id="custom_headings">
-			<%-#Denna kommer alltså loopa ut alla CustomHeadings, behövs ingen for each från @bc #-%>
-			<%-# nested_forms_ som står för detta #-%>
-			<%= bc.fields_for :headings do |heading_form| %>
-				<div class="heading" style="border:1px solid black">
-					Heading: <%= heading_form.text_field :title %><br>
-					Text: <%= heading_form.text_area :text %><br>
-					<%= heading_form.link_to_remove "Remove this Heading" %>
-				</div>
-			<% end %>
-		</div>
-		<div>
-			<%= bc.link_to_add "Add Custom Heading", :headings, :data => {:target => "#custom_headings" } %>
-		</div>
+	<div id="custom_headings"></div>
+	<div>
+		<%= bc.link_to_add "Add Custom Heading", :headings, :data => {:target => "#custom_headings" } %>
 	</div>
 	<p>
 		<%= bc.submit %>
