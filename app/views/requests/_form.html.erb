@@ -1,6 +1,6 @@
-<%= form_for @request do |obj| %>
+<%= form_for @request, html: {class: 'form-horizontal'} do |obj| %>
 	<% if @request.errors.any? %>
-		<div id="error">
+		<div id="error_explanation">
 		<%= pluralize(@request.errors.count, "error") %> errors.
 		<ul>
 			<% @request.errors.full_messages.each do |msg| %>
@@ -9,24 +9,35 @@
 		</ul>
 		</div>
 	<% end %>
-	
-	<p>
-		<%= obj.label :name %><br>
-		<%= obj.text_field :name %><br>
-	</p>
-	<p>
-		<%= obj.label :company %><br>
-		<%= obj.text_area :company %><br>
-	</p>
-	<p>
-		<%= obj.label :owner %><br>
-		<%= obj.text_field :owner %><br>
-	</p>
-	<p>
-		<%= obj.label :creation_date %><br>
-		<%= obj.date_select :creation_date %><br>
-	</p>
+	<div class="field form-group">
+		<%= obj.label :name ,class: 'col-sm-2 control-label' %>
+		<div class="col-sm-10">
+			<%= obj.text_field :name %>
+		</div>
+	</div>
+	<div class="field form-group">
+		<%= obj.label :company ,class: 'col-sm-2 control-label' %>
+		<div class="col-sm-10">
+			<%= obj.text_field :company%>
+		</div>
+	</div>
+	<div class="field form-group">
+		<%= obj.label :owner ,class: 'col-sm-2 control-label' %>
+		<div class="col-sm-10">
+			<%= obj.text_field :owner %>
+		</div>
+	</div>
+	<div class="field form-group">
+		<%= obj.label :creation_date,class: 'col-sm-2 control-label' %>
+		<div class="col-sm-10">
+			<%= obj.date_select :creation_date %>
+		</div>
+	</div>
 		
-	<%= obj.submit %>
+	<div class="actions form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		      <%= obj.submit 'Create', :class => 'btn btn-primary' %>
+		</div>
+	</div>
 <% end %>
 
