@@ -37,7 +37,7 @@ class HeadingsController < ApplicationController
 	def update
 		#@context = find_context
 		@heading = Heading.find(params[:id])
-		@bc = @heading.headerable
+		@headerable = @heading.headerable
 		if @heading.update_attributes(heading_params)
 		end
 	end
