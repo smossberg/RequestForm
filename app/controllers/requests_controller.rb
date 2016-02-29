@@ -15,13 +15,17 @@ class RequestsController < ApplicationController
 	end 
 	def create
 		@request = Request.new(request_params)
-		@request.business_context = BusinessContext.new
-		@request.business_context.description = "Autogenererad description"
+		
 		if @request.save
 			redirect_to @request
+			#render 'show'
 		else
+			@disable_nav = true
 			render 'new'
 		end
+		#Fyll business Context default
+		@request.business_context = BusinessContext.create
+		@request.business_context.headings.create(:title => "Description", :text => "")
 	end
 	def update
 		@request = Request.find(params[:id])
