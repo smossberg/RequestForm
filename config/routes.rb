@@ -19,8 +19,9 @@ resources :requests do
 	resource :business_context 
 end
 resources :business_context do 
-	resources :headings
+	resources :headings, only: [:new,  :edit, :show, :create, :destroy]
 end
+resources :headings, only: [:update]
 root 'requests#index'
   # Example resource route with options:
   #   resources :products do

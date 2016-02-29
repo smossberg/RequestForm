@@ -1,0 +1,5 @@
+<%= form_for [@heading], url: heading_path(@heading), remote: true do |f| %>
+	<%= f.text_field :title %>
+	<%= f.text_field :text %>
+	<%= f.submit %>
+<% end %>

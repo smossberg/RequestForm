@@ -1,8 +1,8 @@
 class HeadingsController < ApplicationController
 
 	@disable_nav = true
-	before_action :all_headings, only: [:index, :create, :update, :destroy]
-#	before_action :set_headings, only: [:edit, :update, :destroy]
+	#before_action :all_headings, only: [:index, :create, :update, :destroy]
+	#before_action :set_headings, only: [:edit, :update, :destroy]
 	respond_to :html, :js
 	
 	def show
@@ -33,11 +33,10 @@ class HeadingsController < ApplicationController
 	end
 
 	def update
-		@context = find_context
-		@heading = @context.headings.find(params[:id])
-
+		#@context = find_context
+		@heading = Heading.find(params[:id])
+		@bc = @heading.headerable
 		if @heading.update_attributes(heading_params)
-			redirect_to context_url(context)
 		end
 	end
 	
