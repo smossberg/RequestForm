@@ -1,5 +1,12 @@
+<h3>New Heading</h3>
 <%= form_for [@headerable,@heading], url: business_context_headings_path(@headerable, @heading), remote: true do |f| %>
+	<p>
+	<%= f.label :title %>
 	<%= f.text_field :title %>
+	</p>
+	<p>
+	<%= f.label :text %>
 	<%= f.text_field :text %>
-	<%= f.submit  %>
+	</p>
+	<%= f.submit %>
 <% end %>
