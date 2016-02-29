@@ -17,6 +17,7 @@
     </div>
 </div>
 <div id="headings">
+	<%-# sätter headerable till bc, då _headings partialen är tänkt att vara polymorfisk. dvs oboeroende av vilken context den är %>
 	<% @headerable = @bc %>
 	<%= render @headings %>
 </div>
