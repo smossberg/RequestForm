@@ -2,4 +2,3 @@ tmp/*
 *.swo
 *.swp
 *.log
-db/development.sqlite3
