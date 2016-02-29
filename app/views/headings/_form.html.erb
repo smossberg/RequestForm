@@ -1,5 +1,5 @@
-<%= form_for [@bc,@heading], url: business_context_headings_path(@heading), remote: true do |f| %>
+<%= form_for [@headerable,@heading], url: business_context_headings_path(@headerable, @heading), remote: true do |f| %>
 	<%= f.text_field :title %>
 	<%= f.text_field :text %>
-	<%= f.submit %>
+	<%= f.submit  %>
 <% end %>

@@ -9,18 +9,17 @@ class HeadingsController < ApplicationController
 		@heading = Heading.find(params[:id])
 		@disable_nav = true
 	end
-	# Behövs ingen new! Det sköts från de andra controllersen som Heading tillhör
-	# Sker i ex business_context#update
+
 	def new
-		@context = find_headerable
-		@heading = @context.headings.new
+		@headerable= find_headerable
+		@heading = @headerable.headings.new
 #		@heading = Heading.new
 	
 	end
 
 	def create 
-		@context = find_headerable
-		@heading = @context.headings.create(heading_params)
+		@headerable = find_headerable
+		@heading = @headerable.headings.create(heading_params)
 		
 		#if @heading.save
 		#	redirect_to context_url(context)
@@ -42,6 +41,7 @@ class HeadingsController < ApplicationController
 	
 	def destroy
 		heading = Heading.find(params[:id])
+		@heading_id = heading.id
 		heading.destroy
 	end
 

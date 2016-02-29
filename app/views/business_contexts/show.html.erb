@@ -16,10 +16,9 @@
 	<p><%= @bc.to_be_image %></p>
     </div>
 </div>
-<div class="row">
-	<div class="col-sm-8" id="headings">
-		<%= render @headings %>
-	</div>
+<div id="headings">
+	<% @headerable = @bc %>
+	<%= render @headings %>
 </div>
 <div style="display:none" class="row" id="heading-form">
 	<div class="col-sm-8">
