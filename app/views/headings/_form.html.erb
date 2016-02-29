@@ -1,0 +1,5 @@
+<%= form_for [@bc,@heading], url: business_context_headings_path, remote: true do |f| %>
+	<%= f.text_field :title %>
+	<%= f.text_field :text %>
+	<%= f.submit %>
+<% end %>

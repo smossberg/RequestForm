@@ -16,12 +16,16 @@
 	<p><%= @bc.to_be_image %></p>
     </div>
 </div>
-<% @bc.headings.each do |ch| %>
 <div class="row">
-	<div class="col-sm-8">
-		<h3><%= ch.title%></h3>
-		<p><%= ch.text %></p>
+	<div class="col-sm-8" id="headings">
+		<%= render @headings %>
 	</div>
 </div>
-<% end %>
+<div style="display:none" class="row" id="heading-form">
+	<div class="col-sm-8">
+
+	</div>
+</div>
+<%= link_to 'New Heading' , new_business_context_heading_path(@bc), class: 'btn btn-default' ,remote: true  %>
+<br>
 <%= link_to 'Edit' , edit_request_business_context_path %>

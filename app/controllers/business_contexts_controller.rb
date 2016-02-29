@@ -1,7 +1,9 @@
 class BusinessContextsController < ApplicationController
+	respond_to :html, :js
   def show
 	@request = Request.find(params[:request_id])
 	@bc = @request.business_context
+	@headings = @bc.headings.all
   end
 	def edit
 		@request = Request.find(params[:request_id])
