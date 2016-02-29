@@ -11,15 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224195335) do
+ActiveRecord::Schema.define(version: 20160229173254) do
 
   create_table "business_contexts", force: :cascade do |t|
-    t.text     "description"
-    t.string   "as_is_image"
-    t.string   "to_be_image"
     t.integer  "request_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "business_contexts", ["request_id"], name: "index_business_contexts_on_request_id"

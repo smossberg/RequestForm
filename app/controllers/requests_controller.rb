@@ -26,6 +26,8 @@ class RequestsController < ApplicationController
 		#Fyll business Context default
 		@request.business_context = BusinessContext.create
 		@request.business_context.headings.create(:title => "Description", :text => "")
+		@request.business_context.headings.create(:title => "As-Is", :text => "")
+		@request.business_context.headings.create(:title => "To-Be", :text => "")
 	end
 	def update
 		@request = Request.find(params[:id])
