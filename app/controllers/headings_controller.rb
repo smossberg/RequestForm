@@ -21,6 +21,9 @@ class HeadingsController < ApplicationController
 		@headerable = find_headerable
 		@heading = @headerable.headings.create(heading_params)
 		
+		# returnera alla headings till viewn
+		#
+		@headings = @headerable.headings.all
 		#if @heading.save
 		#	redirect_to context_url(context)
 		#end
