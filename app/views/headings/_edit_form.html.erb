@@ -1,5 +1,4 @@
 <h3>Redigera</h1>
-<%-#= form_for [@heading], url: heading_path(@heading),class: "form-horizontal",role: "form", remote: true do |f| #-%>
 <%= form_for @heading, html: {class: 'form-horizontal'}, url: heading_path(@heading), remote: true do |f| %>
 	<div class="field form-group">
 		<%= f.label :title , class: 'col-sm-2 control-label' %>
@@ -19,3 +18,9 @@
 		</div>
 	</div>
 <% end %>
+	<div class="field form-group">
+		<div class="col-sm-10">
+			<%-#= render :partial => 'uploads/index', :uploads => @heading.uploads#-%>
+			<%= render business_context_heading_uploads_path(@bc) %>
+		</div>
+	</div>

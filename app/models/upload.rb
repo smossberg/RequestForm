@@ -1,5 +1,6 @@
 class Upload < ActiveRecord::Base
 	#has_attached_file :attachment, :styles => { :medium => "300x300>", :thumb => "150x150>" }
+	belongs_to :heading
 	has_attached_file :attachment
 
 	validates_attachment	:attachment,

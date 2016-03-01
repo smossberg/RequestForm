@@ -20,10 +20,13 @@ resources :requests do
 	resource :business_context 
 end
 resources :business_context do 
-	resources :headings, only: [:new,  :edit, :show, :create, :destroy]
+	resources :headings, only: [:new,  :edit, :show, :create, :destroy] do
+		resources :uploads, only: [:new, :index]
+	end
 end
-resources :headings, only: [:update]
-resources :uploads
+resources :headings, only: [:update] do
+	resources :uploads
+end
 root 'requests#index'
   # Example resource route with options:
   #   resources :products do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301110746) do
+ActiveRecord::Schema.define(version: 20160301200430) do
 
   create_table "business_contexts", force: :cascade do |t|
     t.integer  "request_id"
@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20160301110746) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
+    t.integer  "heading_id"
   end
+
+  add_index "uploads", ["heading_id"], name: "index_uploads_on_heading_id"
 
 end

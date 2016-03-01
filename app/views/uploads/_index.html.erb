@@ -1,0 +1,5 @@
+<% @uploads.each do |upload| %>
+	<div class="img-thumbnail" style="width:150px; ">
+		<%= image_tag (upload.attachment.url(:original)), :class => "img-thumbnail"%>
+	</div>
+<% end %>
