@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229173254) do
+ActiveRecord::Schema.define(version: 20160301110746) do
 
   create_table "business_contexts", force: :cascade do |t|
     t.integer  "request_id"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 20160229173254) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.date     "creation_date"
+  end
+
+  create_table "uploads", force: :cascade do |t|
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
 end

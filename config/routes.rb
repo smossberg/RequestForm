@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   #get 'business_contexts/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -22,6 +23,7 @@ resources :business_context do
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy]
 end
 resources :headings, only: [:update]
+resources :uploads
 root 'requests#index'
   # Example resource route with options:
   #   resources :products do
