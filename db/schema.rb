@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229173254) do
+ActiveRecord::Schema.define(version: 20160229185938) do
 
   create_table "business_contexts", force: :cascade do |t|
     t.integer  "request_id"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20160229173254) do
     t.string   "ch_context_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "heading_attachments", force: :cascade do |t|
+    t.integer  "heading_id"
+    t.string   "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "headings", force: :cascade do |t|

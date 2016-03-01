@@ -4,15 +4,18 @@ class HeadingsController < ApplicationController
 	#before_action :all_headings, only: [:index, :create, :update, :destroy]
 	#before_action :set_headings, only: [:edit, :update, :destroy]
 	respond_to :html, :js
+	protect_from_forgery with: :null_session
 	
 	def show
 		@heading = Heading.find(params[:id])
+		@heading_attachments = @heading.heading_attachments.all
 		@disable_nav = true
 	end
 
 	def new
 		@headerable= find_headerable
 		@heading = @headerable.headings.new
+		@heading_attachment = @heading.heading_attachments.build
 #		@heading = Heading.new
 	
 	end
@@ -24,7 +27,11 @@ class HeadingsController < ApplicationController
 		# returnera alla headings till viewn
 		#
 		@headings = @headerable.headings.all
-		#if @heading.save
+		if @heading.save
+			params[:heading_attachments]['attachment'].each do |a|
+				@heading_attachment = @heading.heading_attachments.create!(:attachment => a, :heading_id => @heading.id)
+			end
+		end
 		#	redirect_to context_url(context)
 		#end
 	end
