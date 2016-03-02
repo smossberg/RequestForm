@@ -21,13 +21,15 @@
 				<div class="col-sm-12">
 					<div class="panel">
 					<span class="text-muted">Attachments</span>
-						<div id="uploads">
-						<%= render heading.uploads %>
+						<div id="uploads-<%= heading.id %>">
+							<div class="row">
+						<%= render heading.uploads , :heading => heading %>
+							</div>
 						</div>
-						<div id="upload-form">
+						<div id="upload-form-<%= heading.id%>">
 						</div>
 					</div>
-					<%= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default' , remote: true %>
+					<%= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default new-upload-link' , remote: true %>
 				</div>
 			</div>
 		</div>

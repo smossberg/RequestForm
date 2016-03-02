@@ -20,7 +20,7 @@ class UploadsController < ApplicationController
 	def create
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
 		@upload = @heading.uploads.create(upload_params)
-		#if @upload.save
+		@upload.save
 		#	render json: {message: "success"}, :status => 200
 		#else
 		#	render json: { error: @upload.errors.full_messages.join(',')}, :status => 400
@@ -29,11 +29,12 @@ class UploadsController < ApplicationController
 	
 	def destroy
 	    @upload = Upload.find(params[:id])
-	    if @upload.destroy    
-	      render json: { message: "File deleted from server" }
-	    else
-	      render json: { message: @upload.errors.full_messages.join(',') }
-	    end
+	@upload_id = @upload_id #Behövs för att kunna ta bort den från viewn
+	    @upload.destroy    
+	      #render json: { message: "File deleted from server" }
+	    #else
+	      #render json: { message: @upload.errors.full_messages.join(',') }
+	    
 	end
 	
 	private

@@ -1,2 +1,2 @@
 
-$('#upload-form').html("<%= j (render 'form') %>");
+$('#upload-form-<%= @heading.id %>').html("<%= j (render 'form') %>");

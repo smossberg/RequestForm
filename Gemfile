@@ -28,6 +28,7 @@ gem 'nested_form'
 gem 'responders'
 gem 'paperclip'
 gem 'dropzonejs-rails'
+gem 'jquery-turbolinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

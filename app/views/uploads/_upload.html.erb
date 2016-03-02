@@ -1,7 +1,9 @@
-	<div class="col-sm-2">
-			<div width="150px" height="150px">
-				<%= image_tag (upload.attachment.url(:original)), :class => "img-thumbnail thumbnail inline", :style => "width:150px"%>
-			</div>
-		</div>		
+<div class="col-sm-2">
+		<div width="150px" height="150px">
+			<%= image_tag (upload.attachment.url(:original)), :class => "img-thumbnail thumbnail inline", :style => "width:150px"%>
+		</div>
+		<div class="actions">
+			<%= link_to 'Delete', heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default'%>
+		</div>
+</div>
 
-	</div>

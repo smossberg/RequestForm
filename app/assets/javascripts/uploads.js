@@ -1,6 +1,11 @@
-$(function(){
-	Dropzone.autoDiscover = false;
 
+$(document).ready(function() {
+	$('.new-upload-link').click(function(){
+		
+		Dropzone.discover();
+	});
+	
+	Dropzone.autoDiscover = false;
 	$("#new_upload").dropzone({
 		paramName: "upload[attachment]",
 		addRemoveLinks: true

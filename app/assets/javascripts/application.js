@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require dropzone
 //= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
 //= require jquery_nested_form
