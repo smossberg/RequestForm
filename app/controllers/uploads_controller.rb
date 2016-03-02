@@ -1,17 +1,20 @@
 class UploadsController < ApplicationController
 	protect_from_forgery with: :null_session
+	respond_to :html, :js
 
 	def index 
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
-		@uploads = @heading.uploads.all
+		@uploads = @heading.uploads
 		@upload = @heading.uploads.new
 		@disable_nav = true
 
 	end
+	def show
+		@upload = Upload.find(params[:id])
+	end
 	def new
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
-		@upload = @heading.uploads.build
-		@disable_nav = true
+		@upload = @heading.uploads.new
 	end
 
 	def create
@@ -36,5 +39,8 @@ class UploadsController < ApplicationController
 	private
 		def upload_params
 			params.require(:upload).permit!
+		end
+		def heading_params
+			params.require(:heading).permit!
 		end
 end

@@ -7,6 +7,7 @@ class HeadingsController < ApplicationController
 	
 	def show
 		@heading = Heading.find(params[:id])
+		@uploads = @heading.uploads.all
 		@disable_nav = true
 	end
 
