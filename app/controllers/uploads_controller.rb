@@ -20,11 +20,11 @@ class UploadsController < ApplicationController
 	def create
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
 		@upload = @heading.uploads.create(upload_params)
-		if @upload.save
-			render json: {message: "success"}, :status => 200
-		else
-			render json: { error: @upload.errors.full_messages.join(',')}, :status => 400
-		end
+		#if @upload.save
+		#	render json: {message: "success"}, :status => 200
+		#else
+		#	render json: { error: @upload.errors.full_messages.join(',')}, :status => 400
+		#end
 	end
 	
 	def destroy

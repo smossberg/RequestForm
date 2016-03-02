@@ -1,9 +1,7 @@
-<div class="row">
-	<div class="col-sm-12">
-			<div class="img-thumbnail">
-				<%= image_tag (upload.attachment.url(:original)), :class => "img-thumbnail"%>
+	<div class="col-sm-2">
+			<div width="150px" height="150px">
+				<%= image_tag (upload.attachment.url(:original)), :class => "img-thumbnail thumbnail inline", :style => "width:150px"%>
 			</div>
 		</div>		
 
 	</div>
-</div>
