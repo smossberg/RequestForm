@@ -28,6 +28,14 @@ class RequestsController < ApplicationController
 		@request.business_context.headings.create(:title => "Description", :text => "")
 		@request.business_context.headings.create(:title => "As-Is", :text => "")
 		@request.business_context.headings.create(:title => "To-Be", :text => "")
+		#Fyll i Application Landscape Default
+		@request.application_landscape = ApplicationLandscape.create
+		@text = "Id / Objective / Information Entity / Master Data / Information Security Class / Information Entity Owner / Information Consumer / Information Provider"
+		@request.application_landscape.headings.create(:title => "Information Entities & Data Flows", :text => @text)
+
+
+
+
 	end
 	def update
 		@request = Request.find(params[:id])
