@@ -2,4 +2,5 @@
 	<%-#använder HELPERN nav_link för att sätta class="active", den kollar vilken controller som används och sätter dit class="active" ifall det är den controllern som används #-%>
 	  <li role="presentation" ><%= nav_link 'Integration', request_path(@request.id) %></li>
 	  <li role="presentation" ><%= nav_link 'Business Context', request_business_context_path(@request.id) %></li>
+	  <li role="presentation" ><%= nav_link 'Application Landscape', request_application_landscape_path(@request.id) %></li>
 </ul>

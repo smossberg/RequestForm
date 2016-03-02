@@ -1,0 +1,14 @@
+<div id="headings">
+	<%-# sätter headerable till alc, då _headings partialen är tänkt att vara polymorfisk. dvs oboeroende av vilken context den är %>
+	<% @headerable = @alc %>
+	<%= render @headings %>
+</div>
+<div style="display:none" class="row" id="heading-form">
+	<div class="col-sm-8">
+
+	</div>
+</div>
+<div>
+<%= link_to 'New Heading' , new_application_landscape_heading_path(@alc), class: 'btn btn-default' ,remote: true  %>
+</div>
+<br>

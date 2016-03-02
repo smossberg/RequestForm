@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229173254) do
+ActiveRecord::Schema.define(version: 20160302122930) do
+
+  create_table "application_landscapes", force: :cascade do |t|
+    t.integer  "request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "business_contexts", force: :cascade do |t|
     t.integer  "request_id"

@@ -17,9 +17,13 @@ Rails.application.routes.draw do
   #   resources :products
 resources :requests do 
 	resource :business_context 
+  resource :application_landscape
 end
 resources :business_context do 
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy]
+end
+resources :application_landscape do
+  resources :headings, only: [:new, :edit, :show, :create, :destroy]
 end
 resources :headings, only: [:update]
 root 'requests#index'
