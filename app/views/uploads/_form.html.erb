@@ -1,6 +1,32 @@
-<%= form_for [@heading,@upload], html: { multipart: true, class: "dropzone"},url: heading_uploads_path, remote: true do |f|  %>
+<%= form_for @upload, html: { multipart: true , id: "fileupload"},url: heading_uploads_path(@heading), remote: true do |f|  %>
   <div class="fallback">
+    <%= f.label :attachment %><br>
     <%= f.file_field :attachment %><br>
     <%= f.submit "Upload" %>
   </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+	/*
+  $(function () {
+      // Initialize the jQuery File Upload widget:
+      $('#fileupload').fileupload();
+      // 
+      // Load existing files:
+      $.getJSON($('#fileupload').prop('action'), function (files) {
+        var fu = $('#fileupload').data('blueimpFileupload'), 
+          template;
+        fu._adjustMaxNumberOfFiles(-files.length);
+        console.log(files);
+        template = fu._renderDownload(files)
+          .appendTo($('#fileupload .files'));
+        // Force reflow:
+        fu._reflow = fu._transition && template.length &&
+          template[0].offsetWidth;
+        template.addClass('in');
+        $('#loading').remove();
+      });
+
+  });*/
+</script>
+

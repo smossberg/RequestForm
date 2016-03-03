@@ -27,8 +27,10 @@ gem 'nested_form'
 #gem 'simple_form'
 gem 'responders'
 gem 'paperclip'
-gem 'dropzonejs-rails'
+#gem 'dropzonejs-rails'
 gem 'jquery-turbolinks'
+gem 'jquery-fileupload-rails'
+gem 'remotipart'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

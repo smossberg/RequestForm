@@ -1,6 +1,6 @@
 class UploadsController < ApplicationController
 	protect_from_forgery with: :null_session
-	respond_to :html, :js 
+	respond_to  :js ,:html,:xhr
 
 	def index 
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
@@ -20,13 +20,13 @@ class UploadsController < ApplicationController
 	def create
 		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
 		@upload = @heading.uploads.create(upload_params)
+		@uploads = @heading.uploads.all
 		
 		respond_to do |format|
 			if @upload.save
-				format.js { render 'create' }
-			#	format.json {render json: {message: "success", :status => 200}	
+				format.js {render 'create'}	
 			else
-				format.js {render 'new'}
+				#format.js {render 'new' } 	
 			end
 		end
 	end
@@ -39,10 +39,6 @@ class UploadsController < ApplicationController
 				format.js { render 'destroy' }
 			end
 		end	
-	      #render json: { message: "File deleted from server" }
-	    #else
-	      #render json: { message: @upload.errors.full_messages.join(',') }
-	    
 	end
 	
 	private

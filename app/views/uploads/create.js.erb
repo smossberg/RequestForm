@@ -1,1 +1,3 @@
-$('#uploads-<%= @heading.id %>').html("<%= j (render @upload) %>");
+<%= remotipart_response do %>
+	$('#heading-uploads-<%= @heading.id %>').html("<%= j (render @uploads) %>");
+<% end %>
