@@ -1,4 +1,3 @@
-
 <%= form_for [@heading,@upload], html: { multipart: true, class: "dropzone"},url: heading_uploads_path, remote: true do |f|  %>
   <div class="fallback">
     <%= f.file_field :attachment %><br>
