@@ -5,5 +5,13 @@ class Upload < ActiveRecord::Base
 
 	validates_attachment	:attachment,
 				:precense => true,
-				content_type: { content_type: ["image/jpg","image/jpeg","image/png","image/gif"]}
+				content_type: { content_type: ["image/jpg","image/jpeg","image/png","image/bmp","image/gif",
+				"application/x-visio",
+				"application/msword",
+				 "application/pdf",
+				"application/excel",
+				"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+				"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+				"application/vnd.ms-powerpoint",
+				"application/vnd.openxmlformats-officedocument.presentationml.presentation" ]}
 end

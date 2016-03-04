@@ -1,11 +1,11 @@
 <div class="row">
         <div class="col-sm-12" >
 		<div heading-id="<%= heading.id %>" >
-			<div class ="row">
+			<div class ="row img-rounded">
 				<div class="col-sm-10">
 					<h3 class="h3"><%= heading.title %></h3>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 ">
 					<%= link_to 'Edit', edit_business_context_heading_path(@headerable,heading), remote: true , :class=>'btn btn-default btn-small'%>
 					<%= link_to 'Delete', business_context_heading_path(@headerable,heading), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default'%>
 				</div>
@@ -23,13 +23,22 @@
 					<span class="text-muted">Attachments</span>
 						<div id="heading-uploads-<%= heading.id %>">
 							<div class="row">
-						<%= render heading.uploads , :heading => heading %>
+								<%= render heading.uploads , :heading => heading, :edit => false%>
 							</div>
 						</div>
-						<div id="upload-form-<%= heading.id%>">
+						<div id="upload-form-<%= heading.id%>" >
+		<% if false %>
+							<%= form_for heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(heading), remote: true do |f|  %>
+							 	<div class="fallback panel p-a-2">
+								    <%= f.label :attachment %><br>
+								    <%= f.file_field :attachment %><br>
+								    <%= f.submit "Upload" %>
+								</div>
+							<% end %>
+						<% end %>	
 						</div>
 					</div>
-					<%= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default new-upload-link' , remote: true %>
+					<%#= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default new-upload-link' , remote: true %>
 				</div>
 			</div>
 		</div>

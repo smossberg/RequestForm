@@ -15,6 +15,7 @@
 //= require jquery.remotipart
 //= require turbolinks
 //= require jquery.turbolinks
+//= require dropzone
 //= require jquery_nested_form
-//= require jquery-fileupload
+//= require jquery-fileupload/basic
 //= require_tree .
