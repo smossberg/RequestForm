@@ -23,7 +23,8 @@
 			<div class="col-sm-12">
 				<div id="heading-uploads-<%= @heading.id %>">
 					<div class="row">
-				<%= render @heading.uploads , :heading => @heading ,:edit => true%>
+					<h4 class="text-muted">Attachments</h4>
+						<%= render @heading.uploads , :heading => @heading ,:edit => true%>
 					</div>
 				<div>
 			</div>
@@ -32,6 +33,9 @@
 	<div id="upload-form-<%= @heading.id%>" >
 	<%= form_for @heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(@heading), remote: true do |f|  %>
 	  <div class="fallback panel p-a-2">
+			<h4>Add new attachment</h4>
+			Description: <br>
+			<%= f.text_field :name %><br>
 		    <%= f.label :attachment %><br>
 		    <%= f.file_field :attachment %><br>
 		    <%= f.submit "Upload" %>
