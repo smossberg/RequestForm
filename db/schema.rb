@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307134204) do
+ActiveRecord::Schema.define(version: 20160307210804) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -19,11 +19,6 @@ ActiveRecord::Schema.define(version: 20160307134204) do
     t.string   "protocol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "actors_requests", id: false, force: :cascade do |t|
-    t.integer "request_id"
-    t.integer "actor_id"
   end
 
   create_table "business_contexts", force: :cascade do |t|
@@ -53,6 +48,13 @@ ActiveRecord::Schema.define(version: 20160307134204) do
   end
 
   add_index "headings", ["headerable_type", "headerable_id"], name: "index_headings_on_headerable_type_and_headerable_id"
+
+  create_table "request_actors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "request_id"
+    t.integer  "actor_id"
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "name"

@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
 
+	helper :form_for_actor
   def index
 	if (params.has_key?(:request_id)) 
 		@request = Request.find(params[:request_id])
