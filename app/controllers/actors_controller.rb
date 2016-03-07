@@ -18,9 +18,9 @@ class ActorsController < ApplicationController
   def create
 	@actor = Actor.create(actor_params)
 	if @actor.save 
-		redirect_to :show
+		redirect_to @actor
 	else
-		redirect_to :new
+		redirect_to 'new'
 	end
 	@disable_nav = true
   end
@@ -32,9 +32,9 @@ class ActorsController < ApplicationController
   def update
 	@actor = Actor.find(params[:id])
 	if @actor.update(actor_params)
-		redirect_to :show
+		redirect_to 'show'
 	else
-		redict_to :edit
+		redict_to 'edit'
 	end
 	
   end
