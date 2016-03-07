@@ -10,12 +10,12 @@
 					<p class="text-center"><%= upload.name %></p>
 		<% end %>
 		</div>
-			<% if @edit.present?%>
+			<% if edit.present?%>
 				<% if edit == true %>
-				<div class="actions">
-					<%= link_to 'Delete', heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' , :heading_id => heading.id%>
-					
-				</div>
+					<div class="actions">
+						<%= link_to 'Delete', heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' , :heading_id => heading.id%>
+						
+					</div>
 				<% end%>
 			<% end%>
 </div>
