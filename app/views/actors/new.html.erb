@@ -1,0 +1,17 @@
+<h1>Actors#create</h1>
+<p>Find me in app/views/actors/create.html.erb</p>
+<%= form_for :actor,url: actors_path do |f| %>
+<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :platform %>
+	<%= f.text_field :platform%>
+</p>
+<p>
+	<%= f.label :protocol %>
+	<%= f.text_field :protocol %>
+</p>
+	<%= f.submit %>
+<% end %>

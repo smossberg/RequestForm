@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+resources :actors
   #get 'business_contexts/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
