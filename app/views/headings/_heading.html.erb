@@ -6,8 +6,12 @@
 					<h3 class="h3"><%= heading.title %></h3>
 				</div>
 				<div class="col-sm-2 ">
-					<%= link_to 'Edit', edit_business_context_heading_path(@headerable,heading), remote: true , :class=>'btn btn-default btn-small'%>
-					<%= link_to 'Delete', business_context_heading_path(@headerable,heading), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default'%>
+					<%= link_to edit_business_context_heading_path(@headerable, heading), remote: true , :class=>'btn btn-default btn-small' do %>
+					<i class="glyphicon glyphicon-pencil"></i>
+					<% end %>
+					<%= link_to business_context_heading_path(@headerable,heading), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' do %>
+					<i class="glyphicon glyphicon-trash"></i>
+					<% end %>
 				</div>
 			</div>
 			<div class="row">

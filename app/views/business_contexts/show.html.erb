@@ -8,7 +8,11 @@
 
 	</div>
 </div>
-<div>
-<%= link_to 'New Heading' , new_business_context_heading_path(@bc), class: 'btn btn-default' ,remote: true  %>
+
+
+<%= link_to new_business_context_heading_path(@bc),remote: true do %>
+<div class="col-sm-offset-4 col-sm-3">
+	<button type="button" class="btn btn-primary btn-lg btn-block btn-info">New Heading</button>
 </div>
+<% end %>
 <br>
