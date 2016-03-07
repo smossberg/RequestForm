@@ -19,6 +19,7 @@ resources :actors
   #   resources :products
 resources :requests do 
 	resource :business_context 
+	resources :actors
 end
 resources :business_context do 
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy] do

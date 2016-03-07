@@ -1,22 +1,42 @@
 class ActorsController < ApplicationController
 
   def index
-	@actors = Actor.all
-	@disable_nav = true
+	if (params.has_key?(:request_id)) 
+		@request = Request.find(params[:request_id])
+		@actors = @request.actors.all
+	else
+		@actors = Actor.all
+		@disable_nav = true
+	end
   end
 
   def show
-	@actor = Actor.find(params[:id])
-	@disable_nav = true
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		@actor = @request.actors.find(params[:id])
+	else 
+		@actor = Actor.find(params[:id])
+		@disable_nav = true
+	end
   end
 
   def new
-	@actor = Actor.new
-	@disable_nav = true
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		@actor = @request.actors.new
+	else	
+		@actor = Actor.new
+		@disable_nav = true
+	end
   end
 
   def create
-	@actor = Actor.create(actor_params)
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		@actor = @request.actors.create(actor_params)
+	else
+		@actor = Actor.create(actor_params)
+	end
 	if @actor.save 
 		redirect_to @actor
 	else

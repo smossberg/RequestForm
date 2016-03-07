@@ -1,6 +1,10 @@
 <h1>Actors#index</h1>
 
-<%= link_to 'New Actor', new_actor_path %>
+<% if params.has_key?(:request_id)  %>
+	<%= link_to 'New Actor', new_request_actor_path %>
+<% else %>
+	<%= link_to 'New Actor', new_actor_path %>
+<% end %>
 <% @actors.each do |a| %>
 	<% @actor = a %>
 	<%= render a %>
