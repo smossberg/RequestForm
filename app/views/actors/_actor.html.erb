@@ -2,4 +2,7 @@
 
 <%= @actor.platform %><br>
 <%= @actor.protocol %><br>
+<%= link_to 'Destroy', actor_path(@actor),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 

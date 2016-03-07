@@ -34,14 +34,16 @@ class ActorsController < ApplicationController
 	if @actor.update(actor_params)
 		redirect_to 'show'
 	else
-		redict_to 'edit'
+		redirect_to 'edit'
 	end
 	
   end
 
   def destroy
-	actor = Actor.find(params[:id])
-	actor.destroy
+	@actor = Actor.find(params[:id])
+	if @actor.destroy
+		redirect_to 'index'
+	end
   end
 	private
 		def actor_params
