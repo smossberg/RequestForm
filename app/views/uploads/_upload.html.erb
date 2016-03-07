@@ -2,21 +2,25 @@
 		<div width="150px" height="150px" style="display:block">
 
 		<%if upload.attachment.present?%>
+
+			<% if (edit.present?) && (edit == true)%>
+					<div class="absolute-top-right">
+						<%= link_to  '',heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-lg glyphicon glyphicon-remove-circle attachment-float-align ' , :heading_id => heading.id %>
+						
+					</div>
+			<% end%>
+
 			<% if upload.attachment.content_type.include? "image" %>
 				<%=link_to (image_tag (upload.attachment.url(:original)),:alt => upload.name, :class => "img-thumbnail thumbnail inline", :style => "width:150px, height:150px, display:block"), upload.attachment.url(:original, false)%>
+
 			<% else %>
+
 				<%=link_to (image_tag 'doc-icon.png',:alt => upload.name, :class => "img-thumbnail thumbnail inline", :style => "width:150px, height:150px"), upload.attachment.url(:original, false)%>
 			<% end %>
-					<p class="text-center"><%= upload.name %></p>
+
+
+			<p class="text-center"><%= upload.name %></p>
 		<% end %>
 		</div>
-			<% if @edit.present?%>
-				<% if edit == true %>
-				<div class="actions">
-					<%= link_to 'Delete', heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' , :heading_id => heading.id%>
-					
-				</div>
-				<% end%>
-			<% end%>
 </div>
 
