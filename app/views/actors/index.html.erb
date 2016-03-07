@@ -1,0 +1,8 @@
+<h1>Actors#index</h1>
+<p>Find me in app/views/actors/index.html.erb</p>
+
+
+<% @actors.each do |a| %>
+	<% @actor = a %>
+	<%= render a %>
+<% end %>
