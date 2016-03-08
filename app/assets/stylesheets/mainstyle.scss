@@ -9,9 +9,37 @@
 	margin-right:20px;
 	clear:both;
 }
+
+
 .attachment-remove-align {
 	width:100%;
 }
 .glyphicon-remove-circle {
 	font-size:25px;
 }
+
+#wrapper {
+	margin-left: 8%;
+	margin-right: 8%;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+}
+
+body {
+	background-color: #C0C0C0;
+}
+.row {
+	vertical-align: bottom;
+}
+.headercontainer {
+	position: relative;
+}
+
+.headerglyph {
+	position: absolute;
+    bottom: 3px;
+    right: 0;
+}
+
