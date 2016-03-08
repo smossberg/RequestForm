@@ -4,4 +4,6 @@ class Request < ActiveRecord::Base
 
 	has_many :request_actors
 	has_many :actors, through: :request_actors
+
+	has_many :flows
 end

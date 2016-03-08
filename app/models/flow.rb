@@ -4,5 +4,7 @@ class Flow < ActiveRecord::Base
 
 	has_many :flow_actors
 	has_one :flow_actor
+
+	belongs_to :request
 	
 end
