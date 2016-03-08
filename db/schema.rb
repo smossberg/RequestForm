@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307210804) do
+ActiveRecord::Schema.define(version: 20160308142717) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 20160307210804) do
     t.string   "ch_context_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "flow_actors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "actor_id"
+    t.integer  "flow_id"
+  end
+
+  create_table "flows", force: :cascade do |t|
+    t.string   "name"
+    t.text     "objective"
+    t.string   "size"
+    t.string   "security"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "headings", force: :cascade do |t|
