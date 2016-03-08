@@ -39,15 +39,23 @@ class ActorsController < ApplicationController
 		@actor = Actor.create(actor_params)
 	end
 	if @actor.save 
-		redirect_to @actor
+		if (params.has_key?(:request_id))
+			redirect_to request_actor_path(@request,@actor)
+		else
+			redirect_to @actor
+		end
 	else
-		redirect_to 'new'
+		if (params.has_key?(:request_id))
+			redirect_to new_request_actor_path(@request)
+		else
+			redirect_to 'new'
+		end
 	end
 	@disable_nav = true
   end
   
   def edit
-	@actor = Actor.find(oarams[:id])
+	@actor = Actor.find(params[:id])
 	@disable_nav = true
   end 
   def update
