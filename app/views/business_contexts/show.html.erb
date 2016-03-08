@@ -3,11 +3,12 @@
 	<% @headerable = @bc %>
 	<%= render @headings %>
 </div>
-<div style="display:none" class="row" id="heading-form">
-	<div class="col-sm-8">
 
+	<div class="col-sm-10">
+		<div style="display:none" class="row" id="heading-form">
+		</div>
 	</div>
-</div>
+
 
 
 <%= link_to new_business_context_heading_path(@bc),remote: true do %>
