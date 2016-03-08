@@ -3,7 +3,7 @@
 
 		<%if upload.attachment.present?%>
 
-			<% if (edit.present?) && (edit == true)%>
+			<% if local_assigns[:edit]  %>
 					<div class="absolute-top-right">
 						<%= link_to  '',heading_upload_path(heading,upload), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-lg glyphicon glyphicon-remove-circle attachment-float-align ' , :heading_id => heading.id %>
 						
