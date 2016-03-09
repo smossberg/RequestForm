@@ -1,0 +1,12 @@
+<h1>Flow#index</h1>
+<%= link_to 'New Flow', new_request_flow_path , remote: true%>
+<div class="row">
+	<div id="flow-form" class="new-form col-sm-10">
+
+	</div>
+</div>
+<div id="flows">
+	<% @flows.each do |flow| %>
+		<%= render flow %>
+	<% end %>
+</div>

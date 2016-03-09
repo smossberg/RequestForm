@@ -1,0 +1,46 @@
+<%= form_for @flow , url: request_flows_path(@request) do |f| %>
+	<div class="row flow-top">
+		<div class="field form-group">
+			<div class="col-sm-6 col-sm-offset-4 ">
+				<h3 class="text-muted">New Dataflow</h3>
+				<%= f.label :name %><br>
+				<%= f.text_field :name %>
+			</div>
+		</div><br>
+		<div class="field form-group">
+			<div class="col-sm-6 col-sm-offset-4">
+				<%= f.label :objective%><br>
+				<%= f.text_area :objective %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<h4 class="text-muted">Provider(s)</h4>
+			<%#= f.collection_select :actor_id, Actor.all, :id, :name #%>
+		</div>
+		<div class="col-sm-4">
+			<h4 class="text-muted">Message</h4>
+			<%= f.label :size %><br>
+			<%= f.select(:size) do %>
+				<%= options_for_select([
+					['< 1kb','< 1kb'],
+					['< 1mb','< 1mb']
+				]) %>
+			<% end %>
+		</div>
+		<div class="col-sm-4">
+			<h4 class="text-muted">Consumer(s)</h4>
+			<%=f.select :consumer_ids, :multiple => true do %>
+				<% actor_array = Actor.all.map { |actor| [actor.name, actor.id] } %>
+				<%= options_for_select(actor_array) %>
+
+			<% end %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3 col-sm-offset-10">
+			<%= f.submit class: 'btn btn-primary'%>
+		</div>
+	</div>
+<% end %>

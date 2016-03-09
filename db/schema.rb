@@ -52,7 +52,10 @@ ActiveRecord::Schema.define(version: 20160308154117) do
     t.string   "security"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "request_id"
   end
+
+  add_index "flows", ["request_id"], name: "index_flows_on_request_id"
 
   create_table "headings", force: :cascade do |t|
     t.string   "title"
@@ -80,10 +83,7 @@ ActiveRecord::Schema.define(version: 20160308154117) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.date     "creation_date"
-    t.integer  "request_id"
   end
-
-  add_index "requests", ["request_id"], name: "index_requests_on_request_id"
 
   create_table "uploads", force: :cascade do |t|
     t.datetime "created_at",              null: false
