@@ -66,9 +66,6 @@ class ActorsController < ApplicationController
   def update
 	@actor = Actor.find(params[:id])
 	if @actor.update(actor_params)
-		redirect_to 'show'
-	else
-		redirect_to 'edit'
 	end
 	
   end
