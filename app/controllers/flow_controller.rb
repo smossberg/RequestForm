@@ -1,5 +1,5 @@
 class FlowController < ApplicationController
-	@request = get_request
+	before_action :get_request
   def index
 	@flows = @request.flows.all
   end
@@ -43,12 +43,11 @@ class FlowController < ApplicationController
 	
 	end
   end
-end
-	private flow_params
+	private 
+	def flow_params
 		params.require(:flow).permit!
 	end
-	private get_request
-		Request.find(params[:request_id])
+	def get_request
+		@request = Request.find(params[:request_id])
 	end
-		
-
+end
