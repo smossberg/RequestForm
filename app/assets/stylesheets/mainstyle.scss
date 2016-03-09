@@ -28,7 +28,7 @@
 }
 
 body {
-	background-color: #C0C0C0;
+	background-color: #FBFBFB;
 }
 .row {
 	vertical-align: bottom;
@@ -41,5 +41,38 @@ body {
 	position: absolute;
     bottom: 3px;
     right: 0;
+}
+
+.glyphicon-plus {
+	font-size: 10px;
+}
+
+.row {
+	border-style: none;
+}
+
+div {
+	border-style: none;
+}
+
+.maincontainer {
+	background-color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.navcontainer {
+	background-color: #000080;
+	color: #FFFFFF;
+	position: relative;
+}
+
+.headercontainer {
+	background-color: #EFEFEF;
+}
+
+
+.glyphicon-home{
+	font-size: 45px;
 }
 
