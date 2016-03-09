@@ -1,4 +1,8 @@
 <%= render @actor %>
 <p>
-<%= link_to 'Back to index', actors_path %>
+<% if params.has_key?(:request_id) %>
+	<%= link_to 'Back', request_actors_path(@request) %>
+<% else %>
+	<%= link_to 'Back to index', actors_path %>
+<% end %>
 </p>

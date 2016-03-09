@@ -1,11 +1,16 @@
 <h1>Actors#index</h1>
 
 <% if params.has_key?(:request_id)  %>
-	<%= link_to 'New Actor', new_request_actor_path %>
+	<%= link_to 'New Actor', new_request_actor_path , remote: true%>
 <% else %>
-	<%= link_to 'New Actor', new_actor_path %>
+	<%= link_to 'New Actor', new_actor_path , remote: true%>
 <% end %>
-<% @actors.each do |a| %>
-	<% @actor = a %>
-	<%= render a %>
-<% end %>
+<div id="actors">
+	<% @actors.each do |a| %>
+		<% actor = a %>
+		<%= render a %>
+	<% end %>
+</div>
+<div id="actor-form">
+
+</div>

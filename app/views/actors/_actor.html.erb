@@ -1,8 +1,35 @@
-<h2><%= link_to @actor.name, actor_path(@actor) %></h2>
+<div class="row">
+	<div class="col-sm-12">
+		<div actor-id="<%= actor.id %>">
+			<div class="col-sm-6">
+				<h2>
+					<%if params.has_key?(:request_id) %>
+						<%= link_to actor.name, request_actor_path(@request, actor), remote: true %>
+					<% else %>
+						<%= link_to actor.name, actor_path(actor), remote: true %>
 
-<%= @actor.platform %><br>
-<%= @actor.protocol %><br>
-<%= link_to 'Destroy', actor_path(@actor),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-
+					<% end %>
+				</h2>
+			</div>
+			<div class="col-sm-2 actions">
+				<%= link_to '', actor_path(actor),
+					      method: :delete,
+					      data: { confirm: 'Are you sure?' },
+					      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
+				<%if params.has_key?(:request_id) %>
+					<%= link_to '', edit_request_actor_path(@request, actor), 
+						class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+				<% else %>
+					<%= link_to '', edit_actor_path(actor),
+						class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+				<% end %>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Platform: <%= actor.platform %><br></p>
+					<p>Protocol: <%= actor.protocol %><br></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

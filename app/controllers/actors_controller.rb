@@ -1,6 +1,7 @@
 class ActorsController < ApplicationController
 
 	helper :form_for_actor
+	respond_to :html, :js
   def index
 	if (params.has_key?(:request_id)) 
 		@request = Request.find(params[:request_id])
@@ -34,23 +35,27 @@ class ActorsController < ApplicationController
   def create
 	if (params.has_key?(:request_id))
 		@request = Request.find(params[:request_id])
-		@actor = @request.actors.create(actor_params)
-	else
-		@actor = Actor.create(actor_params)
-	end
-	if @actor.save 
-		if (params.has_key?(:request_id))
-			redirect_to request_actor_path(@request,@actor)
-		else
-			redirect_to @actor
+		if @request.actors.create(actor_params)
+			@actors = @request.actors.all
 		end
 	else
-		if (params.has_key?(:request_id))
-			redirect_to new_request_actor_path(@request)
-		else
-			redirect_to 'new'
+		if Actor.create(actor_params)
+			@actors = Actor.all
 		end
 	end
+#	if @actor.save 
+#		if (params.has_key?(:request_id))
+#			redirect_to request_actor_path(@request,@actor)
+#		else
+#			redirect_to @actor
+#		end
+#	else
+#		if (params.has_key?(:request_id))
+#			redirect_to new_request_actor_path(@request)
+#		else
+#			redirect_to 'new'
+#		end
+#	end
 	@disable_nav = true
   end
   
@@ -69,11 +74,13 @@ class ActorsController < ApplicationController
   end
 
   def destroy
-	@actor = Actor.find(params[:id])
-	if @actor.destroy
-		redirect_to actors_path
-	end
+	actor = Actor.find(params[:id])
+	@actor_id = actor.id
+	actor.destroy
+	
   end
+
+
 	private
 		def actor_params
 			params.require(:actor).permit!
