@@ -1,41 +1,50 @@
-<%= form_for @flow , url: request_flows_path(@request) do |f| %>
+<%= form_for @flow , url: request_flows_path(@request) , :html => {:role => 'form'} do |f| %>
 	<div class="row flow-top">
 		<div class="field form-group">
-			<div class="col-sm-6 col-sm-offset-4 ">
+			<div class="col-sm-6 col-sm-offset-3 ">
 				<h3 class="text-muted">New Dataflow</h3>
-				<%= f.label :name %><br>
-				<%= f.text_field :name %>
+				<%= f.label :name, class: 'control-label' %><br>
+				<%= f.text_field :name, class: 'form-control' %>
 			</div>
 		</div><br>
-		<div class="field form-group">
-			<div class="col-sm-6 col-sm-offset-4">
-				<%= f.label :objective%><br>
-				<%= f.text_area :objective %>
+	</div>
+	<div class="row">
+		<div class="col-sm-3 form-group field">
+			<h4 class="text-muted">Provider(s)</h4>
+			<br>
+				<%= f.collection_select :provider_ids, @request.actors.all, :id, :name, {multiple: true, include_blank: "Select a provider system"},{class: 'form-control'} %>
+
+		</div>
+		<div class="col-sm-6">
+			<h4 class="text-muted">Message</h4>
+			<div class="col-sm-4">	
+				Size: <%= f.select :size,
+					options_for_select([
+						['< 1kb','< 1kb'],
+						['< 1mb','< 1mb']
+					]), {},{class: 'form-control'}%>
 			</div>
+			<div class="col-sm-4">	
+				Security: <%= f.select :security,
+					options_for_select([
+						['kb','< 1kb'],
+						['< 1mb','< 1mb']
+					]), {},{class: 'form-control'}%>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<h4 class="text-muted">Consumer(s)</h4>
+			<br>
+				<%= f.collection_select :consumer_ids, @request.actors.all, :id, :name, { multiple: true, include_blank: "Select a consumer system"},{class: 'form-control'} %>
+
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-4">
-			<h4 class="text-muted">Provider(s)</h4>
-			<%#= f.collection_select :actor_id, Actor.all, :id, :name #%>
-		</div>
-		<div class="col-sm-4">
-			<h4 class="text-muted">Message</h4>
-			<%= f.label :size %><br>
-			<%= f.select(:size) do %>
-				<%= options_for_select([
-					['< 1kb','< 1kb'],
-					['< 1mb','< 1mb']
-				]) %>
-			<% end %>
-		</div>
-		<div class="col-sm-4">
-			<h4 class="text-muted">Consumer(s)</h4>
-			<%=f.select :consumer_ids, :multiple => true do %>
-				<% actor_array = Actor.all.map { |actor| [actor.name, actor.id] } %>
-				<%= options_for_select(actor_array) %>
-
-			<% end %>
+		<div class="field form-group">
+			<div class="col-sm-8 col-sm-offset-2">
+				<%= f.label :objective, class: 'control-label'%><br>
+				<%= f.text_area :objective , class: 'form-control'%>
+			</div>
 		</div>
 	</div>
 	<div class="row">

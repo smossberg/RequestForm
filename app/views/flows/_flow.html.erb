@@ -18,15 +18,19 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-8">
-					<%= flow.objective %><br>
-					Provider: <% flow.provider do |f|%><br>
+					<p>
+						Objective: <br>
+						<%= flow.objective %>
+					</p>
+					<p>
+						Provider: <% flow.providers.each do |f|%><br>
 							<%= f.name %>
-							<% end %><br>
+							<% end %>
+					</p><br>
 					Consumer: <% flow.consumers.each  do |c|%>
 							<%= c.name %><br>
 						<%end%>
 				</div>		
-			</div>
 			</div>
 		</div>
 	</div>
