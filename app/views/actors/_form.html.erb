@@ -1,0 +1,23 @@
+<h4>New Actor</h4>
+<%= form_for_actor params.has_key?(:request_id)do |f| %>
+<p>
+	<div class="field form-group">
+		<div class="col-sm-6">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</div>
+	</div>
+	<div class="field form-group">
+		<div class="col-sm-6">
+		<%= f.label :platform %>
+			<%= f.text_field :platform %>
+		</div>
+	</div>
+	<div class="field form-group">
+		<div class="col-sm-6">
+		<%= f.label :protocol %>
+			<%= f.text_field :protocol %>
+		</div>
+	</div>
+	<%= f.submit %>
+<% end %>

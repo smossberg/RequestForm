@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 resources :actors
   #get 'business_contexts/show'
 
@@ -19,6 +20,8 @@ resources :actors
   #   resources :products
 resources :requests do 
 	resource :business_context 
+	resources :actors
+	resources :flows
 end
 resources :business_context do 
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy] do

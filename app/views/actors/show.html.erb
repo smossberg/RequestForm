@@ -1,5 +1,8 @@
-<h2><%= @actor.name %></h2>
-
-<%= @actor.platform %><br>
-<%= @actor.protocol %><br>
-
+<%= render @actor %>
+<p>
+<% if params.has_key?(:request_id) %>
+	<%= link_to 'Back', request_actors_path(@request) %>
+<% else %>
+	<%= link_to 'Back to index', actors_path %>
+<% end %>
+</p>

@@ -1,5 +1,39 @@
-<h2><%= @actor.name %></h2>
+<div class="row">
+	<div class="col-sm-10">
+		<div actor-id="<%= actor.id %>">
 
-<%= @actor.platform %><br>
-<%= @actor.protocol %><br>
+			<div class="row img-rounded headercontainer">
+				<div class="col-sm-6">
+					<h2>
+						<%if params.has_key?(:request_id) %>
+							<%= actor.name%>
+						<% else %>
+							<%= link_to actor.name, actor_path(actor), remote: true %>
 
+						<% end %>
+					</h2>
+				</div>
+				<div class="col-sm-2 headerglyph actions">
+					<%= link_to '', actor_path(actor),
+						      method: :delete,
+						      data: { confirm: 'Are you sure?' },
+						      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
+					<%if params.has_key?(:request_id) %>
+						<%= link_to '', edit_request_actor_path(@request, actor), 
+							class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+					<% else %>
+						<%= link_to '', edit_actor_path(actor),
+							class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+					<% end %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+					<p>Platform: <%= actor.platform %><br></p>
+					<p>Protocol: <%= actor.protocol %><br></p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

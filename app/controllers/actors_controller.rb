@@ -1,48 +1,83 @@
 class ActorsController < ApplicationController
 
+	helper :form_for_actor
+	respond_to :html, :js
   def index
-	@actors = Actor.all
-	@disable_nav = true
+	if (params.has_key?(:request_id)) 
+		@request = Request.find(params[:request_id])
+		@actors = @request.actors.all
+	else
+		@actors = Actor.all
+		@disable_nav = true
+	end
   end
 
   def show
-	@actor = Actor.find(params[:id])
-	@disable_nav = true
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		@actor = @request.actors.find(params[:id])
+	else 
+		@actor = Actor.find(params[:id])
+		@disable_nav = true
+	end
   end
 
   def new
-	@actor = Actor.new
-	@disable_nav = true
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		@actor = @request.actors.new
+	else	
+		@actor = Actor.new
+		@disable_nav = true
+	end
   end
 
   def create
-	@actor = Actor.create(actor_params)
-	if @actor.save 
-		redirect_to @actor
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+		if @request.actors.create(actor_params)
+			@actors = @request.actors.all
+		end
 	else
-		redirect_to 'new'
+		if Actor.create(actor_params)
+			@actors = Actor.all
+		end
 	end
+#	if @actor.save 
+#		if (params.has_key?(:request_id))
+#			redirect_to request_actor_path(@request,@actor)
+#		else
+#			redirect_to @actor
+#		end
+#	else
+#		if (params.has_key?(:request_id))
+#			redirect_to new_request_actor_path(@request)
+#		else
+#			redirect_to 'new'
+#		end
+#	end
 	@disable_nav = true
   end
   
   def edit
-	@actor = Actor.find(oarams[:id])
+	@actor = Actor.find(params[:id])
 	@disable_nav = true
   end 
   def update
 	@actor = Actor.find(params[:id])
 	if @actor.update(actor_params)
-		redirect_to 'show'
-	else
-		redict_to 'edit'
 	end
 	
   end
 
   def destroy
 	actor = Actor.find(params[:id])
+	@actor_id = actor.id
 	actor.destroy
+	
   end
+
+
 	private
 		def actor_params
 			params.require(:actor).permit!

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307124331) do
+ActiveRecord::Schema.define(version: 20160311130905) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +38,32 @@ ActiveRecord::Schema.define(version: 20160307124331) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "flow_consumers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "actor_id"
+    t.integer  "flow_id"
+  end
+
+  create_table "flow_providers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "actor_id"
+    t.integer  "flow_id"
+  end
+
+  create_table "flows", force: :cascade do |t|
+    t.string   "name"
+    t.text     "objective"
+    t.string   "size"
+    t.string   "security"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "request_id"
+  end
+
+  add_index "flows", ["request_id"], name: "index_flows_on_request_id"
+
   create_table "headings", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
@@ -48,6 +74,13 @@ ActiveRecord::Schema.define(version: 20160307124331) do
   end
 
   add_index "headings", ["headerable_type", "headerable_id"], name: "index_headings_on_headerable_type_and_headerable_id"
+
+  create_table "request_actors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "request_id"
+    t.integer  "actor_id"
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "name"

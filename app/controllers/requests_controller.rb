@@ -28,6 +28,9 @@ class RequestsController < ApplicationController
 		@request.business_context.headings.create(:title => "Description", :text => "")
 		@request.business_context.headings.create(:title => "As-Is", :text => "")
 		@request.business_context.headings.create(:title => "To-Be", :text => "")
+
+		#Skapa Actors 
+		@request.actors.build
 	end
 	def update
 		@request = Request.find(params[:id])
