@@ -11,8 +11,5 @@
 	</div>
 </div>
 <div id="actors">
-	<% @actors.each do |a| %>
-		<% actor = a %>
-		<%= render a %>
-	<% end %>
+	<%= render @actors %>
 </div>
