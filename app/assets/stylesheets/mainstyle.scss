@@ -30,16 +30,14 @@
 body {
 	background-color: #FBFBFB;
 }
-.row {
-	vertical-align: bottom;
-}
+
 .headercontainer {
 	position: relative;
 }
 
 .headerglyph {
 	position: absolute;
-    bottom: 3px;
+    bottom: 5px;
     right: 0;
 }
 
@@ -62,17 +60,31 @@ div {
 }
 
 .navcontainer {
-	background-color: #000080;
+	background-color: #0069B4;
 	color: #FFFFFF;
 	position: relative;
 }
 
 .headercontainer {
-	background-color: #EFEFEF;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
 }
 
 
 .glyphicon-home{
 	font-size: 45px;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.textright {
+	text-align: right;
+}
+
+.nav-pills > li.active > a {
+	background-color: #0069B4;
 }
 
