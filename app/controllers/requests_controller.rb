@@ -50,7 +50,7 @@ class RequestsController < ApplicationController
 	
 	private 
 		def request_params 
-			params.require(:request).permit(:name, :description, :creation_date, :company, :owner, :business_context)
+			params.require(:request).permit(:name, :description, :creation_date, :company, :owner, :business_context, :actors)
 		end
 
 end

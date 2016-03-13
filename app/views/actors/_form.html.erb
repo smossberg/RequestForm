@@ -1,23 +1,47 @@
-<h4>New Actor</h4>
-<%= form_for_actor params.has_key?(:request_id)do |f| %>
-<p>
-	<div class="field form-group">
-		<div class="col-sm-6">
-			<%= f.label :name %>
-			<%= f.text_field :name %>
+<div class="row new-object">
+	<div class="col-sm-4">
+		<div class="row">
+		<h4>New Actor</h4>
+		<%= form_for_actor params.has_key?(:request_id)do |f| %>
+			<div class="field form-group">
+				<div class="col-sm-6">
+					<%= f.label :name %>
+					<%= f.text_field :name %>
+				</div>
+			</div>
+			<div class="field form-group">
+				<div class="col-sm-6">
+				<%= f.label :platform %>
+					<%= f.text_field :platform %>
+				</div>
+			</div>
+			<div class="field form-group">
+				<div class="col-sm-6">
+				<%= f.label :protocol %>
+					<%= f.text_field :protocol %>
+				</div>
+			</div>
+			<%= f.submit %>
+		<% end %>
 		</div>
 	</div>
-	<div class="field form-group">
-		<div class="col-sm-6">
-		<%= f.label :platform %>
-			<%= f.text_field :platform %>
-		</div>
+	<div class="col-sm-4">
+		<h4>Add existing Actor</h4>
+		<div class="row">
+			<div class="col-sm-12">
+			<h1><%= @request.id %></h4>
+				<%= form_for @request, url: request_path(@request), remote: true do |f| %>
+					<%= fields_for :actors do |a| %>
+						<%= a.collection_select :actor, Actor.all, :id, :name, {multiple: true, include_blank: "Select an existing Actor/System"},{class: 'form-control'} %>
+					<%end %>
+					<%= f.submit %>
+				<% end %> 
+			</div>				
+		</div>		
 	</div>
-	<div class="field form-group">
-		<div class="col-sm-6">
-		<%= f.label :protocol %>
-			<%= f.text_field :protocol %>
-		</div>
+	<div class="col-sm-4">
+		<p>
+			Info om actors
+		</p>
 	</div>
-	<%= f.submit %>
-<% end %>
+</div>
