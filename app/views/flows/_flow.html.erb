@@ -1,36 +1,51 @@
 <div flow-id="<%= flow.id %>">
-	<div class="row">
+	<div class="row data-flow">
 		<div class="col-sm-10">
-				<div class="row headercontainer">
-					<div class="col-sm-6">
-						<h2>
-								<%= flow.name%>
-						</h2>
+			<div class="row headercontainer">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h3 class="text-muted">
+						<%= flow.name%>
+					</3>
+				</div>
+				<div class="col-sm-2 headerglyph actions">
+					<%= link_to '', request_flow_path(@request,flow),
+						      method: :delete,
+						      data: { confirm: 'Are you sure?' },
+						      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
+					<%= link_to '', edit_request_flow_path(@request,flow),
+						class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3 ">
+					<h4 class="text-muted">Provider(s)</h4>
+						<% flow.providers.each do |f|%><br>
+							<h4><%= link_to f.name, request_actor_path(@request, f) %></h4>
+						<% end %>
+					<br>
+				</div>		
+				<div class="col-sm-6">
+					<h4 class="text-muted">Message</h4>
+					<div class="col-sm-4">	
+						<b>Size:</b> <%= flow.size %>
 					</div>
-					<div class="col-sm-2 headerglyph actions">
-						<%= link_to '', request_flow_path(@request,flow),
-							      method: :delete,
-							      data: { confirm: 'Are you sure?' },
-							      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
-						<%= link_to '', edit_request_flow_path(@request,flow),
-							class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+					<div class="col-sm-4">	
+						<b>Security:</b> <%= flow.security %>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-8">
-						<p>
-							Objective: <br>
-							<%= flow.objective %>
-						</p>
-						<p>
-							Provider: <% flow.providers.each do |f|%><br>
-								<%= f.name %>
-								<% end %>
-						</p><br>
-						Consumer: <% flow.consumers.each  do |c|%>
-								<%= c.name %><br>
-							<%end%>
+				<div class="col-sm-3 ">
+					<h4 class="text-muted">Consumer(s)</h4>
+						<% flow.consumers.each do |f|%><br>
+							<h4><%= link_to f.name, request_actor_path(@request, f) %></h4>
+						<% end %>
+					<br>
 				</div>		
+			</div>
+			<div class="row panel panel-default">
+				<div class="col-sm-8 col-sm-offset-3">
+					<h4 class="text-muted">Objective</h4>
+					<%= flow.objective %>
+				</div>
 			</div>
 		</div>
 	</div>
