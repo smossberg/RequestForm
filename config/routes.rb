@@ -23,7 +23,9 @@ resources :requests do
 		patch 'add_actors', :action => :add_actors_to_request 
 	end
 	resource :business_context 
-	resources :actors
+	resources :actors do
+		delete 'unlink',:on => :member,:controller => :requests, :action => :remove_actor_from_request 
+	end
 	resources :flows
 end
 resources :business_context do 

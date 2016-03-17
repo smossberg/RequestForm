@@ -10,11 +10,16 @@
 				<div class="col-sm-2 headerglyph actions">
 					<%= link_to '', actor_path(actor),
 						      method: :delete,
-						      data: { confirm: 'Are you sure?' },
+						      data: { confirm: 'Do you want to delete the Actor completely? \n If you only want to remove the actor from this request, use the X' },
 						      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
 					<%if params.has_key?(:request_id) %>
+						<%= link_to '', unlink_request_actor_path(@request, actor),
+							method: :delete,
+							data: {confirm: 'Are you sure?'},
+							class: 'btn btn-default glyphicon glyphicon-remove-sign', remote: true %>
 						<%= link_to '', edit_request_actor_path(@request, actor), 
 							class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>
+						
 					<% else %>
 						<%= link_to '', edit_actor_path(actor),
 							class: 'btn btn-default glyphicon glyphicon-pencil', remote: true %>

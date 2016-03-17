@@ -60,6 +60,13 @@ class RequestsController < ApplicationController
 			render :js => "window.location = '#{request_actors_path(@request)}'" 
 		end
 	end
+	def remove_actor_from_request
+		@request = Request.find(params[:request_id])
+		actor_id = params[:id]
+		if @request.actors.delete(Actor.find(actor_id))
+			render :js => "window.location = '#{request_actors_path(@request)}'" 
+		end
+	end
 	
 	private 
 		def request_params 
