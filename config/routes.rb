@@ -18,7 +18,10 @@ resources :actors
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-resources :requests do 
+resources :requests do
+	member do
+		patch 'add_actors', :action => :add_actors_to_request 
+	end
 	resource :business_context 
 	resources :actors
 	resources :flows

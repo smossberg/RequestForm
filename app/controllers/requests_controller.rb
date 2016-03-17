@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+	respond_to :html , :js
 	def index
 		@requests = Request.all
 		@disable_nav = true
@@ -47,16 +48,22 @@ class RequestsController < ApplicationController
 
 		redirect_to action: "index"
 	end
-
-	def add_actors 
+	
+	#För att kunna addera existerande actors till requesten, istället för att skapa en identisk
+	def add_actors_to_request 
 		@request = Request.find(params[:id])
-		actors = Actors.where(id: params[:actors])
-		@request.actors << actors
+		actor_ids = params[:request][:actor_ids] 
+		logger.info "actor ids: #{actor_ids}"
+		actor_ids = actor_ids.reject  { |c| c.empty? }
+		actors = Actor.where(id: actor_ids)
+		if @request.actors << actors
+			render :js => "window.location = '#{request_actors_path(@request)}'" 
+		end
 	end
 	
 	private 
 		def request_params 
-			params.require(:request).permit(:name, :description, :creation_date, :company, :owner, :business_context, :actors)
+			params.require(:request).permit(:name, :description, :creation_date, :company, :owner, :business_context, :actors, :actor_ids, :actor_ids[])
 		end
 
 end
