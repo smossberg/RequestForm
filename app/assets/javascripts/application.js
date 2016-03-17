@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require jquery.turbolinks
 //= require dropzone
+//= require bootstrap-select
 //= require jquery_nested_form
 //= require jquery-fileupload/basic
 //= require_tree .

@@ -34,7 +34,7 @@ class FlowsController < ApplicationController
   end
 	private 
 	def flow_params
-		params.require(:flow).permit(:name, :objective, :size, :provider_ids, :consumer_ids)
+		params.require(:flow).permit(:name, :objective, :size,:security,:provider_ids,:consumer_ids, :provider_ids => [], :consumer_ids => [])
 	end
 	def get_request
 		@request = Request.find(params[:request_id])

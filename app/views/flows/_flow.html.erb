@@ -5,7 +5,7 @@
 				<div class="col-sm-6 col-sm-offset-3">
 					<h3 class="text-muted">
 						<%= flow.name%>
-					</3>
+					</h3>
 				</div>
 				<div class="col-sm-2 headerglyph actions">
 					<%= link_to '', request_flow_path(@request,flow),
@@ -19,8 +19,8 @@
 			<div class="row">
 				<div class="col-sm-3 ">
 					<h4 class="text-muted">Provider(s)</h4>
-						<% flow.providers.each do |f|%><br>
-							<h4><%= link_to f.name, request_actor_path(@request, f) %></h4>
+						<% flow.providers.each do |f|%>
+							<p><%= link_to f.name, request_actor_path(@request, f) %></p>
 						<% end %>
 					<br>
 				</div>		
@@ -35,8 +35,8 @@
 				</div>
 				<div class="col-sm-3 ">
 					<h4 class="text-muted">Consumer(s)</h4>
-						<% flow.consumers.each do |f|%><br>
-							<h4><%= link_to f.name, request_actor_path(@request, f) %></h4>
+						<% flow.consumers.each do |f|%>
+							<p><%= link_to f.name, request_actor_path(@request, f) %></p>
 						<% end %>
 					<br>
 				</div>		

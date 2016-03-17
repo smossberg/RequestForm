@@ -31,6 +31,7 @@ gem 'dropzonejs-rails'
 gem 'jquery-turbolinks'
 gem 'jquery-fileupload-rails'
 gem 'remotipart'
+gem 'bootstrap-select-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
