@@ -4,4 +4,4 @@
 $ ->
 	$('#existing-actor-form').hide()
 	$('#existing-actor-button').on "click", ->
-		$('#existing-actor-form').show()
+		$('#existing-actor-form').toggle()
