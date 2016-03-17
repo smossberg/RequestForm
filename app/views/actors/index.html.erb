@@ -1,11 +1,14 @@
 <% if params.has_key?(:request_id)  %>
 	<%= link_to 'New Actor', new_request_actor_path , remote: true, class: 'btn-primary btn'%>
+	<%= button_tag 'Add existing Actor', id: 'existing-actor-button', class: 'btn btn-primary' %>
 <% else %>
 	<%= link_to 'New Actor', new_actor_path , remote: true%>
 <% end %>
 <div class="row">
 	<div id="actor-form" class="new-form col-sm-6">
 
+	</div>
+	<div id="existing-actor-form" class="new-form col-sm-4">
 	</div>
 </div>
 <div id="actors">

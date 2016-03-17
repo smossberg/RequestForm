@@ -47,6 +47,12 @@ class RequestsController < ApplicationController
 
 		redirect_to action: "index"
 	end
+
+	def add_actors 
+		@request = Request.find(params[:id])
+		actors = Actors.where(id: params[:actors])
+		@request.actors << actors
+	end
 	
 	private 
 		def request_params 
