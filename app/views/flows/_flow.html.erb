@@ -1,10 +1,10 @@
 <div flow-id="<%= flow.id %>">
-	<div class="row data-flow">
+  <div class="row">
     <div class="col-xs-12 col-sm-12" >
       <section class ="panel panel-primary">
         <header class="panel-heading">
           <div class="row">
-            <div class="col-xs-10">
+            <div class="col-xs-5 col-xs-offset-5">
               <h1 class="panel-title" ><%= flow.name%></h1>
             </div>
             <div class="col-xs-2">
@@ -17,37 +17,37 @@
             </div>
           </div>
         </header>
-			<div class="row">
-				<div class="col-sm-3 ">
-					<h4 class="text-muted">Provider(s)</h4>
-						<% flow.providers.each do |f|%>
-							<p><%= link_to f.name, request_actor_path(@request, f) %></p>
-						<% end %>
-					<br>
-				</div>		
-				<div class="col-sm-6">
-					<h4 class="text-muted">Message</h4>
-					<div class="col-sm-4">	
-						<b>Size:</b> <%= flow.size %>
-					</div>
-					<div class="col-sm-4">	
-						<b>Security:</b> <%= flow.security %>
-					</div>
-				</div>
-				<div class="col-sm-3 ">
-					<h4 class="text-muted">Consumer(s)</h4>
-						<% flow.consumers.each do |f|%>
-							<p><%= link_to f.name, request_actor_path(@request, f) %></p>
-						<% end %>
-					<br>
-				</div>		
-			</div>
-			<div class="row panel panel-default">
-				<div class="col-sm-8 col-sm-offset-3">
-					<h4 class="text-muted">Objective</h4>
-					<%= flow.objective %>
-				</div>
-			</div>
-		</div>
+        <div class="panel-body">
+          <div class="col-sm-3 ">
+            <h4 class="text-muted">Provider(s)</h4>
+              <% flow.providers.each do |f|%>
+                <p><%= link_to f.name, request_actor_path(@request, f) %></p>
+              <% end %>
+            <br>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">Message</h4>
+            <div class="col-sm-4">
+              <b>Size:</b> <%= flow.size %>
+            </div>
+            <div class="col-sm-4">
+              <b>Security:</b> <%= flow.security %>
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <h4 class="text-muted">Consumer(s)</h4>
+              <% flow.consumers.each do |f|%>
+                <p><%= link_to f.name, request_actor_path(@request, f) %></p>
+              <% end %>
+            <br>
+          </div>
+			  </div>
+        <div class="panel-footer">
+            <h4 class="text-muted">Objective</h4>
+            <%= flow.objective %>
+
+        </div>
+		  </section>
+    </div>
 	</div>
 </div>

@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a635155e-d61e-41df-b41d-5b2d4374651f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/RequestForm.iml" afterPath="$PROJECT_DIR$/.idea/RequestForm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/flows/_edit_form.html.erb" afterPath="$PROJECT_DIR$/app/views/flows/_edit_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/flows/_flow.html.erb" afterPath="$PROJECT_DIR$/app/views/flows/_flow.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/headings/_edit_form.html.erb" afterPath="$PROJECT_DIR$/app/views/headings/_edit_form.html.erb" />
     </list>
     <ignored path="RequestForm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_heading.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_heading.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/headings/_heading.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47957373">
-              <caret line="18" column="17" selection-start-line="3" selection-start-column="6" selection-end-line="18" selection-end-column="17" />
+            <state vertical-scroll-proportion="-13.75">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -57,8 +53,18 @@
       <file leaf-file-name="_flow.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/flows/_flow.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_edit_form.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/flows/_edit_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7868561">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -75,6 +81,7 @@
         <option value="$PROJECT_DIR$/app/views/headings/_heading.html.erb" />
         <option value="$PROJECT_DIR$/app/views/headings/_edit_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/flows/_flow.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/flows/_edit_form.html.erb" />
       </list>
     </option>
   </component>
@@ -424,18 +431,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/flows/_flow.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/headings/_heading.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/headings/_heading.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/flows/_flow.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47957373">
-          <caret line="18" column="17" selection-start-line="3" selection-start-column="6" selection-end-line="18" selection-end-column="17" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/flows/_edit_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7868561">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
           <folding />
         </state>
       </provider>
