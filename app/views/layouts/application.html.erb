@@ -11,24 +11,39 @@
 </head>
 <body>
 	<header>
-		<div class="container img-rounded navcontainer">
-		<div class="row">
-			<div class="col-sm-11">
-				<h1>Baseline Integration Request</h1>
-			</div>
-			<div class="col-sm-1">
-				<%= link_to requests_path, :class=>'btn btn-link btn-small' do %>
-					<i class="glyphicon glyphicon-home"></i>
-					<% end %>
+		<div class="navcontainer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-11">
+						<h1>Baseline Integration Request</h1>
+					</div>
+					<div class="col-sm-1">
+						<%= link_to requests_path, :class=>'btn btn-link btn-small' do %>
+							<i class="glyphicon glyphicon-home"></i>
+							<% end %>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-	<header>
+	</header>
 	<div class="container maincontainer">
-		<%= render 'request_nav_bar' unless @disable_nav %>
-		<%= yield %>
+		<div class="row">
+			<div class="col-xs-12">
+				Requests | Actors 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+				<%= render 'request_nav_bar' unless @disable_nav %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 	
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</div>
 </body>
 </html>

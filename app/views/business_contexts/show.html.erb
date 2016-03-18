@@ -1,13 +1,14 @@
-<div id="headings" class="col-sm-12">
+<div id="headings" class="col-xs-12">
 	<%-# sätter headerable till bc, då _headings partialen är tänkt att vara polymorfisk. dvs oboeroende av vilken context den är %>
 	<% @headerable = @bc %>
 	<%= render @headings %>
 </div>
 
-	<div class="col-sm-10">
-		<div style="display:none" class="row" id="heading-form">
-		</div>
+<div class="col-xs-10">
+	<div style="display:none" class="row" id="heading-form">
+		<!--placeholder !-->
 	</div>
+</div>
 
 
 

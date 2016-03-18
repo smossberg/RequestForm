@@ -1,47 +1,52 @@
 <div heading-id="<%= heading.id %>" >
 	<div class="row">
-		<div class="col-sm-10" >
-			<div class ="row headercontainer">
-				<div class="col-sm-10">
-					<h3 class="h3"><%= heading.title %></h3>
-				</div>
-				<div class="col-sm-2  headerglyph">
-					<%= link_to edit_business_context_heading_path(@headerable, heading), remote: true , :class=>'btn btn-default btn-small' do %>
-					<i class="glyphicon glyphicon-pencil"></i>
-					<% end %>
-					<%= link_to business_context_heading_path(@headerable,heading), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' do %>
-					<i class="glyphicon glyphicon-trash"></i>
-					<% end %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="panel">
-					<%= heading.text %>
+		<div class="col-xs-12 col-sm-11" >
+			<section class ="panel panel-primary">
+				<header class="panel-heading">
+					<div class="row">
+						<div class="col-xs-10">
+							<h1 class="panel-title" ><%= heading.title %></h1>
+						</div>
+						<div class="col-xs-2">
+							<%= link_to edit_business_context_heading_path(@headerable, heading), remote: true , :class=>'btn btn-default btn-small' do %>
+								<i class="glyphicon glyphicon-pencil"></i>
+							<% end %>
+							<%= link_to business_context_heading_path(@headerable,heading), remote: true, method: :delete,data: {confirm: 'Are you sure?' }, :class=>'btn btn-default' do %>
+								<i class="glyphicon glyphicon-trash"></i>
+							<% end %>
+						</div>
 					</div>
+				</header>
+				<div class="panel-body">
+					<%= heading.text %>
 				</div>
-			</div>
+			</section>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="panel">
-					<span class="text-muted">Attachments</span>
-						<div id="heading-uploads-<%= heading.id %>">
-							<div class="row">
-								<%= render heading.uploads , :heading => heading, :edit => false%>
+					<section class="panel panel-default">
+						<header class="panel-heading">
+							Attachments
+						</header>
+						
+						<div class="panel-body">
+							<div id="heading-uploads-<%= heading.id %>">
+								<div class="row">
+									<%= render heading.uploads , :heading => heading, :edit => false%>
+								</div>
+							</div>
+							<div id="upload-form-<%= heading.id%>" >
+								<% if false %>
+									<%= form_for heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(heading), remote: true do |f|  %>
+										<div class="fallback panel p-a-2">
+										    <%= f.label :attachment %><br>
+										    <%= f.file_field :attachment %><br>
+										    <%= f.submit "Upload" %>
+										</div>
+									<% end %>
+								<% end %>	
 							</div>
 						</div>
-						<div id="upload-form-<%= heading.id%>" >
-		<% if false %>
-							<%= form_for heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(heading), remote: true do |f|  %>
-								<div class="fallback panel p-a-2">
-								    <%= f.label :attachment %><br>
-								    <%= f.file_field :attachment %><br>
-								    <%= f.submit "Upload" %>
-								</div>
-							<% end %>
-						<% end %>	
-						</div>
-					</div>
+					</section>
 					<%#= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default new-upload-link' , remote: true %>
 				</div>
 			</div>
