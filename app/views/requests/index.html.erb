@@ -12,7 +12,6 @@
 		<thead>
 			<tr>
 			<th>Integration</th>
-			<th>Company</th>
 			<th>Owner</th>
 			<th></th>
 			<th></th>
@@ -23,7 +22,6 @@
   <% @requests.each do |request| %>
 	<tr>
 		<td><%= request.name %></td>
-		<td><%= request.company %></td>
 		<td><%= request.owner%></td>
 		<td><%= link_to 'Show', request_path(request), :class => 'btn btn-default' %>  </td>  
 		<td><%= link_to 'Edit', edit_request_path(request), :class => 'btn btn-default' %>  </td>
