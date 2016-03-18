@@ -1,44 +1,66 @@
-<h3>Redigera</h1>
-<%= form_for @heading, html: {class: 'form-horizontal'}, url: heading_path(@heading), remote: true do |f| %>
-	<div class="field form-group">
-		<%= f.label :title , class: 'col-sm-1 control-label' %>
-		<div class="col-sm-10">
-			<%= f.text_field :title, class: 'form-control' %>
-		</div>
-	</div>	
-	<div class="field form-group">
-		<%= f.label :text, class: 'col-sm-1 control-label' %>
-		<div class="col-sm-10">
-			<%= f.text_area :text, class: 'form-control' %>
-		</div>
-	</div>
-	<div class="actions form-group">
-		<div class="col-sm-offset-1 col-sm-10">
-		      <%= f.submit %>
-		</div>
-	</div>
-<% end %>
-	<div class="field form-group">
-		<div class="">
-			<div class="col-sm-12">
-				<div id="heading-uploads-<%= @heading.id %>">
-					<div class="row">
-					<h4 class="text-muted">Attachments</h4>
-						<%= render @heading.uploads , :heading => @heading ,edit: :true%>
-					</div>
-				<div>
-			</div>
-		</div>
-	</div>
+<div class="row">
+  <%= form_for @heading, html: {class: 'form-horizontal'}, url: heading_path(@heading), remote: true do |f| %>
+  <div class="col-xs-12 col-sm-12" >
+    <section class ="panel panel-primary">
+      <header class="panel-heading">
+        <div class="row">
+          <div class="col-xs-5">
+              <div class="field form-group">
+                  <%= f.text_field :title, class: 'form-control' %>
+              </div>
+          </div>
+          <div class="col-xs-5">
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+        </div>
+      </header>
+      <div class="panel-body">
+        <div class="field form-group">
+          <%= f.label :text, class: 'col-sm-1 control-label' %>
+          <div class="col-sm-10">
+            <%= f.text_area :text, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="actions form-group">
+        <div class="col-sm-offset-1 col-sm-10">
+              <%= f.submit %>
+        </div>
+      </div>
+    <% end %>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-xs-2 col-xs-offset-5">
+                <span class="text-muted">Attachments</span>
+              </div>
+            </div>
+
+              <div class="col-sm-12">
+                <div id="heading-uploads-<%= @heading.id %>">
+                  <div class="row">
+                    <%= render @heading.uploads , :heading => @heading ,edit: :true%>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+        </div>
+    </section>
+  </div>
+</div>
 	<div id="upload-form-<%= @heading.id%>" >
-	<%= form_for @heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(@heading), remote: true do |f|  %>
-	  <div class="fallback panel p-a-2">
-			<h4>Add new attachment</h4>
-			Description: <br>
-			<%= f.text_field :name %><br>
+	  <%= form_for @heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(@heading), remote: true do |f|  %>
+	    <div class="fallback panel p-a-2">
+			  Description: <br>
+			  <%= f.text_field :name %><br>
 		    <%= f.label :attachment %><br>
 		    <%= f.file_field :attachment %><br>
 		    <%= f.submit "Upload" %>
 		  </div>
-		<% end %>	
-	</div>
+    <% end %>
+  </div>

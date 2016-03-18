@@ -18,35 +18,32 @@
 					</div>
 				</header>
 				<div class="panel-body">
-					<%= heading.text %>
+					<%= simple_format(heading.text) %>
 				</div>
 				<div class="panel-footer">
 					<div class="row">
 						<div class="col-sm-12">
-								<div class="panel-body">
-									<div class="row">
-										<div class="col-xs-2 col-xs-offset-5">
-											<span class="text-muted">Attachments</span>
-										</div>
-									</div>
-									<div id="heading-uploads-<%= heading.id %>">
-										<div class="row">
-											<%= render heading.uploads , :heading => heading, :edit => false%>
-										</div>
-									</div>
-									<div id="upload-form-<%= heading.id%>" >
-										<% if false %>
-											<%= form_for heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(heading), remote: true do |f|  %>
-												<div class="fallback panel p-a-2">
-												    <%= f.label :attachment %><br>
-												    <%= f.file_field :attachment %><br>
-												    <%= f.submit "Upload" %>
-												</div>
-											<% end %>
-										<% end %>	
-									</div>
-								</div>
-							<%#= link_to 'New Attachment' , new_heading_upload_path(heading), class: 'btn btn-default new-upload-link' , remote: true %>
+                <div class="row">
+                  <div class="col-xs-2 col-xs-offset-5">
+                    <span class="text-muted">Attachments</span>
+                  </div>
+                </div>
+                <div id="heading-uploads-<%= heading.id %>">
+                  <div class="row">
+                    <%= render heading.uploads , :heading => heading, :edit => false%>
+                  </div>
+                </div>
+                <div id="upload-form-<%= heading.id%>" >
+                  <% if false %>
+                    <%= form_for heading.uploads.new, html: { multipart: true , class: "dropzone"},url: heading_uploads_path(heading), remote: true do |f|  %>
+                      <div class="fallback panel p-a-2">
+                          <%= f.label :attachment %><br>
+                          <%= f.file_field :attachment %><br>
+                          <%= f.submit "Upload" %>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
 						</div>
 					</div>
 				</div>
