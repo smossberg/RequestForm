@@ -6,7 +6,7 @@
             <header class="panel-heading">
               <div class="row">
                 <div class="col-xs-5 col-xs-offset-4">
-                  <h1 class="panel-title" ><%= f.text_field :name, class: 'form-control' %></h1>
+                  <h1 class="panel-title" ><%= f.text_field :name, class: 'form-control', :placeholder => "DataFlowName" %></h1>
                 </div>
                 <div class="col-xs-2">
 
@@ -44,7 +44,7 @@
             </div>
             <div class="panel-footer">
               <h4 class="text-muted">Objective</h4>
-              <%= f.text_area :objective , class: 'form-control'%>
+              <%= f.text_area :objective , class: 'form-control' , :placeholder => "Describe the objective of this dataflow.." %>
 
             </div>
           </section>

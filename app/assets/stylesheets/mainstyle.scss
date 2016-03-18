@@ -28,7 +28,8 @@
 }
 
 body {
-	background-color: #FBFBFB;
+  #background-image: image-url("noisy-texture.png");
+  background-color: #fdfdfd;
 }
 
 .headercontainer {
@@ -54,7 +55,7 @@ div {
 }
 
 .maincontainer {
-	background-color: #FFFFFF;
+	#background-color: #FFFFFF;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
