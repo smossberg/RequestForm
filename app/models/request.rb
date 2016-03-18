@@ -6,4 +6,6 @@ class Request < ActiveRecord::Base
 	has_many :actors, through: :request_actors
 
 	has_many :flows
+
+	has_many :owners, as: :ownerable
 end
