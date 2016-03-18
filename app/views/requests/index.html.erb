@@ -16,6 +16,7 @@
 			<th></th>
 			<th></th>
 			<th></th>
+			<th></th>
 			<tr>
 		</thead>
 	</tr>
@@ -23,6 +24,7 @@
 	<tr>
 		<td><%= request.name %></td>
 		<td><%= request.owner%></td>
+		<td><%= request.created_at.strftime("%b %d, %Y")%></td>
 		<td><%= link_to 'Show', request_path(request), :class => 'btn btn-default' %>  </td>  
 		<td><%= link_to 'Edit', edit_request_path(request), :class => 'btn btn-default' %>  </td>
 		<td><%= link_to 'Destroy', request_path(request), method: :delete, data: {confirm: 'Are you sure you want to delete?'}, :class => 'btn btn-default'  %> </td>
