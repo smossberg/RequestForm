@@ -19,4 +19,5 @@
 //= require bootstrap-select
 //= require jquery_nested_form
 //= require jquery-fileupload/basic
+//= require tinymce
 //= require_tree .
