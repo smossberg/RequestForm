@@ -1,4 +1,4 @@
 //$('#headings').html("<%= j (render @heading) %>");
-$('div[heading-id="<%= @heading.id %>"]').html("<%= j (render @heading) %>");
+$('div[heading-id="<%= @heading.id %>"]').replaceWith("<%= j (render @heading) %>");
 $('#heading-form').slideUp(350);
 

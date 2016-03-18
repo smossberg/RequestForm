@@ -1,16 +1,18 @@
 <% if params.has_key?(:request_id)  %>
-	<%= link_to 'New Actor', new_request_actor_path , remote: true, class: 'btn-primary btn'%>
+	<%= link_to 'New Actor', new_request_actor_path , remote: true, id: 'new-actor-button' ,class: 'btn-primary btn'%>
 	<%= button_tag 'Add existing Actor', id: 'existing-actor-button', class: 'btn btn-primary' %>
 <% else %>
-	<%= link_to 'New Actor', new_actor_path , remote: true%>
+	<%= link_to 'New Actor', new_actor_path , remote: true, id: 'new-actor-button', class: 'btn btn-primary'%>
 <% end %>
 <div class="row">
 	<div id="actor-form" class="new-form col-sm-6">
 
 	</div>
-	<div id="existing-actor-form" class="new-form col-sm-4">
-		<%= render 'existing_actor' %>
-	</div>
+	<% if params.has_key?(:request_id)  %>
+		<div id="existing-actor-form" class="new-form col-sm-4">
+			<%= render 'existing_actor' %>
+		</div>
+	<% end %>
 </div>
 <div id="actors">
 	<%= render @actors %>
