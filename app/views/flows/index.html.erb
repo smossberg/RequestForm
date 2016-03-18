@@ -1,11 +1,17 @@
 <%= link_to 'New Flow', new_request_flow_path ,class: 'btn btn-primary', remote: true%>
 <div class="row">
-	<div id="flow-form" class="new-form col-sm-10">
 
-	</div>
 </div>
 <div id="flows">
 	<% @flows.each do |flow| %>
 		<%= render flow %>
 	<% end %>
 </div>
+<div id="flow-form">
+
+</div>
+<%= link_to new_request_flow_path, remote: true do %>
+    <div class="col-sm-offset-4 col-sm-3">
+      <button type="button" class="btn btn-primary btn-lg btn-block btn-info">New Dataflow</button>
+    </div>
+<% end %>
