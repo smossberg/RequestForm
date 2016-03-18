@@ -4,4 +4,12 @@
 $ ->
 	$('#existing-actor-form').hide()
 	$('#existing-actor-button').on "click", ->
-		$('#existing-actor-form').toggle()
+		$('#existing-actor-form').toggle ->
+			$('#existing-actor-button').toggleClass('btn-primary')
+			$('#existing-actor-button').toggleClass('btn-default')
+	
+	$('#new-actor-form').hide()
+	$('#new-actor-button').on "click", ->
+		$('#new-actor-form').toggle ->
+			$('#new-actor-button').toggleClass('btn-primary')
+			$('#new-actor-button').toggleClass('btn-default')
