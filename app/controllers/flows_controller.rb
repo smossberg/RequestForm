@@ -16,6 +16,7 @@ class FlowsController < ApplicationController
   def create
 	#@flow.provider = Actor.find(flow_params.require(:provider))
 	@flow = @request.flows.create(flow_params)
+	@flows = @request.flows.all
   end
 
 
@@ -30,6 +31,7 @@ class FlowsController < ApplicationController
 
   def destroy
 	@flow = @request.flows.find(params[:id])
+	@flow_id = @flow.id
 	@flow.delete
   end
 	private 
