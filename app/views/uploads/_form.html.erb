@@ -1,5 +1,6 @@
 <%= form_for @upload, html: { multipart: true , id: "fileupload"},url: heading_uploads_path(@heading), remote: true do |f|  %>
   <div class="fallback">
+	bajs
     <%= f.label :attachment %><br>
     <%= f.file_field :attachment %><br>
     <%= f.submit "Upload" %>

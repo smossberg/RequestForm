@@ -88,4 +88,12 @@ div {
 .nav-pills > li.active > a {
 	background-color: #0069B4;
 }
-
+.img-wrap {
+    position: relative;
+}
+.img-wrap .close {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 100;
+}

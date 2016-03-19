@@ -10,6 +10,7 @@ class UploadsController < ApplicationController
 
 	end
 	def show
+		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
 		@upload = Upload.find(params[:id])
 	end
 	def new
@@ -32,6 +33,7 @@ class UploadsController < ApplicationController
 	end
 	
 	def destroy
+		@heading = Heading.find(params[:heading_id]) #Fånga tillhörande heading
 		@upload = Upload.find(params[:id])
 		@upload_id = @upload.id #Behövs för att kunna ta bort den från viewn
 		respond_to do |format|
