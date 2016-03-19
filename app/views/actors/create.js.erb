@@ -1,3 +1,5 @@
 $('#actors').html("<%= j (render partial: @actors) %>");
-$('#actor-form').slideUp(350);
+$('#new-actor-form').slideUp(350);
+$('#new-actor-button').toggleClass('btn-default');
+$('#new-actor-button').toggleClass('btn-primary');
 

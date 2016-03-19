@@ -45,10 +45,13 @@
             <div class="panel-footer">
               <h4 class="text-muted">Objective</h4>
               <%= f.text_area :objective , class: 'form-control' , :placeholder => "Describe the objective of this dataflow.." %>
-
+		<div class="row">
+			<div class="col-xs-1 col-xs-offset-10 row-top-20">
+				  <%= f.submit class: 'btn btn-primary'%>
+			</div>
+		</div>
             </div>
           </section>
-          <%= f.submit class: 'btn btn-primary'%>
         </div>
       </div>
 <% end %>
