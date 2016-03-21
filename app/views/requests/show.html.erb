@@ -13,19 +13,21 @@
 
 </div>
 <div class="row">
-	<div class="col-sm-6">
-<p>
-	
 	<br>
 	<div class="row">
 		<div class="col-sm-3 textleft">Project Manager:</div>
 		<div class="col-sm-3 textright"><%= @request.owner %></div>
 	</div>
 	<div class="row">
-		<div class="col-sm-3 textleft">Creation date:</div>	<div class="col-sm-3 textright"><%= @request.created_at %></div>
+		<div class="col-sm-3 textleft">Creation date:</div>	
+		<div class="col-sm-3 textright"><%= @request.created_at %></div>
 	</div>
-
-	
-</p>
+	<div class="row">
+		<div class="col-sm-6 textleft">
+			<h3>Project Stakeholders</h3>
+			<%= render @owners %>
+			<h4>new</h4>
+			<%= render 'owners/new', request: @request %>
+		</div>
 	</div>
 </div>

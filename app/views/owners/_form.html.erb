@@ -1,10 +1,9 @@
-<%= form_for @owner, remote: true do|f| %>
+<%= form_for :owner, remote: true do|f| %>
 	<p>
 		<%= f.label :firstname %>
 		<%= f.text_field :firstname %>
 		<%= f.label :lastname %>
 		<%= f.text_field :lastname %>
-
 	</p>
 	<p>
 		<%= f.label :email%>

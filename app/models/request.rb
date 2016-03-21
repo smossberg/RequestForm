@@ -7,5 +7,6 @@ class Request < ActiveRecord::Base
 
 	has_many :flows
 
-	has_many :owners, as: :ownerable
+	has_many :ownerships, :as => :ownerable
+	has_many :owners, through: :ownerships 
 end

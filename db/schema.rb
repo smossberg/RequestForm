@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318145559) do
+ActiveRecord::Schema.define(version: 20160321124222) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -87,6 +87,14 @@ ActiveRecord::Schema.define(version: 20160318145559) do
   end
 
   add_index "owners", ["ownerable_type", "ownerable_id"], name: "index_owners_on_ownerable_type_and_ownerable_id"
+
+  create_table "ownerships", force: :cascade do |t|
+    t.integer  "ownerable_id"
+    t.string   "ownerable_type"
+    t.integer  "owner_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "request_actors", force: :cascade do |t|
     t.datetime "created_at", null: false

@@ -6,6 +6,7 @@ class RequestsController < ApplicationController
 	end
 	def show
 		@request = Request.find(params[:id])
+		@owners = @request.owners
 	end
 	def new
 		@request = Request.new
