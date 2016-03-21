@@ -15,7 +15,7 @@ class RequestsController < ApplicationController
 		@request = Request.find(params[:id])
 	end 
 	def create
-		@request = Request.new(request_params)
+		@request = Request.new(request_create_params)
 		
 		if @request.save
 			redirect_to @request
@@ -69,8 +69,11 @@ class RequestsController < ApplicationController
 	end
 	
 	private 
+		def request_create_params 
+			params.require(:request).permit(:name, :description, :creation_date, :owner, :business_context)
+		end
 		def request_params 
-			params.require(:request).permit(:name, :description, :creation_date, :company, :owner, :business_context, :actors, :actor_ids, :actor_ids[])
+			params.require(:request).permit(:name, :description, :creation_date, :owner, :business_context, :actors, :actor_ids, :actor_ids[])
 		end
 
 end
