@@ -1,6 +1,5 @@
-<div class="row">
-	<div class="col-sm-6">
-		<b><%= owner.firstname %>	<%= owner.lastname %></b>
-		<%= owner.email %><%= owner.phone %>
-	</div>
-</div>
+<tr id="owner-id-<%= owner.id %>">
+					<td><b><%= owner.firstname %>	<%= owner.lastname %></b></td> 
+					<td><%= owner.email %> </td>
+					<td><%= owner.phone %></td>
+</tr>

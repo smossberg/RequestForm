@@ -23,12 +23,14 @@ resources :owners
 resources :requests do
 	member do
 		patch 'add_actors', :action => :add_actors_to_request 
+		post 'add_owner', :action => :add_ownership, :controller => :owners
 	end
 	resource :business_context 
 	resources :actors do
 		delete 'unlink',:on => :member,:controller => :requests, :action => :remove_actor_from_request 
 	end
 	resources :flows
+	resources :owners
 end
 resources :business_context do 
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy] do

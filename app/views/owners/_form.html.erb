@@ -1,4 +1,5 @@
-<%= form_for :owner, remote: true do|f| %>
+<%= ownerable.name %>
+<%= form_for [ownerable,Owner.new], remote: true do|f| %>
 	<p>
 		<%= f.label :firstname %>
 		<%= f.text_field :firstname %>
@@ -8,6 +9,7 @@
 	<p>
 		<%= f.label :email%>
 		<%= f.email_field :email %>
+	</p>
 		<%= f.label :phone %>
 		<%= f.telephone_field :phone %>
 	</p>

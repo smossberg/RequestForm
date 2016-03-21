@@ -9,4 +9,5 @@ class Request < ActiveRecord::Base
 
 	has_many :ownerships, :as => :ownerable
 	has_many :owners, through: :ownerships 
+  	accepts_nested_attributes_for :ownerships, :allow_destroy => true
 end
