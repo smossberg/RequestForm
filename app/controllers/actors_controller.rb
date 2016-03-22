@@ -67,11 +67,14 @@ class ActorsController < ApplicationController
 	@disable_nav = true
   end 
   def update
+	@actor = Actor.find(params[:id])
 	if (params.has_key?(:request_id))
 		@request = Request.find(params[:request_id])
-	end
-	@actor = Actor.find(params[:id])
-	if @actor.update(actor_params)
+		if @actor.update(actor_params)
+			render 'update', :locals => {:unlink => true}
+		end
+	else
+		@actor.update(actor_params)
 	end
 	
   end

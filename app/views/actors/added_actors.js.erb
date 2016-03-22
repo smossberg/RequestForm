@@ -1,1 +1,2 @@
-$("#actors").replaceWith("<%= j (render @request.actors, show_unlink: true) %>");
+//$("#actors").replaceWith("<%= j (render @request.actors, unlink: true) %>");
+$('div[actor-id="<%= @actor.id %>"]').replaceWith("<%= j (render @actor,request_id: request.id, unlink: true) %>");

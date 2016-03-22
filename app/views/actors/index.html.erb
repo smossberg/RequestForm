@@ -1,31 +1,40 @@
-	<div class="col-xs-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-sm-12">
-						<span class="text-muted"><b>Actors</b></span>
-					</div>
+<div class="col-xs-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<span class="text-muted"><b>Actors</b></span>
 				</div>
 			</div>
 		</div>
 	</div>
-<% if params.has_key?(:request_id)  %>
-	<%= link_to 'New Actor', new_request_actor_path , remote: true, id: 'new-actor-button', class: 'btn-primary btn'%>
-	<%= button_tag 'Add existing Actor', id: 'existing-actor-button', class: 'btn btn-primary' %>
-<% else %>
-	<%= link_to 'New Actor', new_actor_path , remote: true, id: 'new-actor-button', class: 'btn btn-primary'%>
-<% end %>
-<div class="row">
-	<div id="new-actor-form" class="new-form col-sm-6">
-		<%= render 'actors/form' %>
-
-	</div>
-	<% if params.has_key?(:request_id)  %>
-		<div id="existing-actor-form" class="new-form col-sm-4">
-			<%= render 'existing_actor' %>
+</div>
+<div class="col-sm-12"class="row-bottom-20">
+	<div class="row">
+		<div class="col-sm-12">
+			<% if params.has_key?(:request_id)  %>
+				<%= link_to 'New Actor', new_request_actor_path , remote: true, id: 'new-actor-button', class: 'btn-primary btn'%>
+				<%= button_tag 'Add existing Actor', id: 'existing-actor-button', class: 'btn btn-primary' %>
+			<% else %>
+				<%= link_to 'New Actor', new_actor_path , remote: true, id: 'new-actor-button', class: 'btn btn-primary'%>
+			<% end %>
 		</div>
-	<% end %>
+	</div>
+
+	<div class="row">
+		<div id="new-actor-form" class="new-form col-sm-6">
+			<%= render 'actors/form' %>
+
+		</div>
+		<% if params.has_key?(:request_id)  %>
+			<div id="existing-actor-form" class="new-form col-sm-4">
+				<%= render 'existing_actor' %>
+			</div>
+		<% end %>
+	</div>
 </div>
-<div id="actors">
-	<%= render @actors %>
-</div>
+	<div class="col-sm-12 row-top-20">
+		<div id="actors">
+			<%= render @actors %>
+		</div>
+	</div>
