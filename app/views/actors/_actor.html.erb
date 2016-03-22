@@ -3,10 +3,10 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-sm-7">
 						<%= actor.name%>
 					</div>
-					<div class="col-sm-6 ">
+					<div class="col-sm-5 ">
 						<%if params.has_key?(:request_id) || local_assigns.has_key?(:unlink) %>
 							<%= link_to '', unlink_request_actor_path(@request, actor),
 								method: :delete,
@@ -20,15 +20,15 @@
 								remote: true %>
 							
 						<% else %>
+							<%= link_to '', actor_path(actor),
+								      method: :delete,
+								      data: { confirm: 'Do you want to delete the Actor completely?' },
+								      class: 'btn btn-default glyphicon glyphicon-trash', 
+								      remote: true %>
 							<%= link_to '', edit_actor_path(actor),
 								class: 'btn btn-default glyphicon glyphicon-pencil', 
 								remote: true %>
 						<% end %>
-						<%= link_to '', actor_path(actor),
-							      method: :delete,
-							      data: { confirm: 'Do you want to delete the Actor completely?' },
-							      class: 'btn btn-default glyphicon glyphicon-trash', 
-							      remote: true %>
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,8 @@
 						<p>Protocol: <%= actor.protocol %><br></p>
 			</div>
 			<div class="panel-footer">
-		
+				<span class="text-muted">Owner:</span>
+				<%= render actor.owners , :ownerable => actor%>
 			</div>
 		</div>
 	</div>

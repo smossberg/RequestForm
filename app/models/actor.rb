@@ -5,4 +5,7 @@ class Actor < ActiveRecord::Base
 	has_many :flow_consumer
 	has_many :flows_as_provider, through: :flow_provider , source: :flow
 	has_many :flows_as_consumer, through: :flow_consumer, source: :flow
+
+	has_many :ownerships, :as => :ownerable
+	has_many :owners, through: :ownerships
 end

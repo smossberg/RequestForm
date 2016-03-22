@@ -1,1 +1,2 @@
-$("#owners").replaceWith("<%= j (render owners, ownerable: @ownerable) %>");
+<% ownerable = @ownerable %>
+$("#owners").replaceWith("<%= j (render owners, ownerable: ownerable) %>");
