@@ -1,2 +1,6 @@
 <% ownerable = @ownerable %>
-$("#owners").replaceWith("<%= j (render owners, ownerable: ownerable) %>");
+<% if ownerable.class.name == 'Actor' %>
+	$('div[actor-id="<%= ownerable.id %>"]').find('#owners').append(' <%= j (render @owner, ownerable: @ownerable, :removeable => true )%>');
+<% else %>
+$("#owners").replaceWith("<%= j (render owners, ownerable: ownerable, :removeable => true) %>");
+<% end %>

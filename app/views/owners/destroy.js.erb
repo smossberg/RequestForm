@@ -1,1 +1,6 @@
-$('#owner-id-<%=  @owner.id  %>').remove();
+<% if @ownerable.class.name == 'Actor' %>
+	$('div[actor-id="<%= @ownerable.id %>"]').find('#owner-id-<%= @owner.id%>').remove();
+<% else %>
+	$('#owner-id-<%=  @owner.id  %>').remove();
+<% end %>
+$("#existing_owners").replaceWith(' <%= j (render 'existing_owners', :ownerable => @ownerable ) %> ');

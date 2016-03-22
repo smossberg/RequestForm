@@ -38,7 +38,9 @@
 			</div>
 			<div class="panel-footer">
 				<span class="text-muted">Owner:</span>
-				<%= render actor.owners , :ownerable => actor%>
+				<table id="owners">
+				<%= render actor.owners , :ownerable => actor, :locals=> {:removeable => false}%>
+				</table>
 			</div>
 		</div>
 	</div>

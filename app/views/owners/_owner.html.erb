@@ -5,7 +5,9 @@
 		<td><%= owner.email %> </td>
 		<td><%= owner.phone %></td>
 	<% end %>
-	<% if local_assigns.has_key? :removeable %>
-		<td><%= link_to '', owner_path(owner,:ownerable_type => ownerable.class.name,:ownerable_id => ownerable.id ,:owner => owner), class: 'glyphicon glyphicon-remove',method: :delete, remote: true %></td>
+	<% if local_assigns.has_key?(:removeable) %>
+		<% if (:removeable != false) %>
+			<td><%= link_to '', owner_path(owner,:ownerable_type => ownerable.class.name,:ownerable_id => ownerable.id ,:owner => owner), class: 'glyphicon glyphicon-remove',method: :delete, remote: true %></td>
+		<%end %>
 	<% end %>
 </tr>

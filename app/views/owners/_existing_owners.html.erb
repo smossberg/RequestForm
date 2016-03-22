@@ -1,4 +1,4 @@
-
+<div id="existing_owners">
 <div class="row">
 	<div class="col-sm-8">
 		<%= form_for :owner, :url => add_owner_path(:ownerable_type => ownerable.class.name, :ownerable_id => ownerable.id ),method: :patch, remote: true do |f| %>
@@ -11,3 +11,4 @@
 		<% end %> 
 	</div>				
 </div>		
+</div>
