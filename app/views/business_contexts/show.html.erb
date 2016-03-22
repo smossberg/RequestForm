@@ -1,15 +1,17 @@
 <div class="row">
-	<div id="hero" class="hero">
 		<div class="col-sm-6">
 			Business Context
 		</div>
 		<div class="col-sm-6">
-			<table id="owners">
-				<%= render @bc.owners , :ownerable => @bc%>
-			</table>
-			<%= render 'owners/existing_owners', :ownerable => @bc, :request => @request %>
+			<div class="row">
+				<table id="owners" class="col-sm-8">
+					<%= render @bc.owners , :ownerable => @bc%>
+				</table>
+			</div>
+			<div class="col-sm-8">
+				<%= render 'owners/existing_owners', :ownerable => @bc, :request => @request %>
+			</div>
 		</div>
-	</div>
 </div>
 <div id="headings" class="col-xs-12">
 	<%-# sätter headerable till bc, då _headings partialen är tänkt att vara polymorfisk. dvs oboeroende av vilken context den är %>

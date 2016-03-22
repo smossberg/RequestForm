@@ -1,4 +1,4 @@
-$('#actors').html("<%= j (render partial: @actors) %>");
+$('#actors').html("<%= j (render @actors, show_unlink: true) %>");
 $('#new-actor-form').slideUp(350);
 $('#new-actor-button').toggleClass('btn-default');
 $('#new-actor-button').toggleClass('btn-primary');

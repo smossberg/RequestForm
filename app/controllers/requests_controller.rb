@@ -54,11 +54,12 @@ class RequestsController < ApplicationController
 	def add_actors_to_request 
 		@request = Request.find(params[:id])
 		actor_ids = params[:request][:actor_ids] 
-		logger.info "actor ids: #{actor_ids}"
-		actor_ids = actor_ids.reject  { |c| c.empty? }
+		#logger.info "actor ids: #{actor_ids}"
+		#actor_ids = actor_ids.reject  { |c| c.empty? }
 		actors = Actor.where(id: actor_ids)
 		if @request.actors << actors
-			render :js => "window.location = '#{request_actors_path(@request)}'" 
+			#render :js => "window.location = '#{request_actors_path(@request)}'" 
+			render 'actors/added_actors'
 		end
 	end
 	def remove_actor_from_request

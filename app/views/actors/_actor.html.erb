@@ -12,7 +12,7 @@
 						      method: :delete,
 						      data: { confirm: 'Do you want to delete the Actor completely? \n If you only want to remove the actor from this request, use the X' },
 						      class: 'btn btn-default glyphicon glyphicon-trash', remote: true %>
-					<%if params.has_key?(:request_id) %>
+					<%if params.has_key?(:request_id) || :show_unlink? %>
 						<%= link_to '', unlink_request_actor_path(@request, actor),
 							method: :delete,
 							data: {confirm: 'Are you sure?'},

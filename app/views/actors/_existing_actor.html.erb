@@ -4,9 +4,9 @@
 	<div class="col-sm-12">
 		<%= form_for @request, :url => add_actors_request_path(@request), remote: true do |f| %>
 			<% if @request.actors.nil? %>
-				<%= f.collection_select :actor_ids, Actor.where('id NOT IN (?)',@request.actor_ids), :id, :name, { include_blank: "Select an existing Actor/System"},{multiple: true,class: 'form-control'} %>
+				<%= f.collection_select :actor_ids, Actor.where('id NOT IN (?)',@request.actor_ids), :id, :name, { include_blank: "Select an existing Actor/System"},{class: 'form-control'} %>
 			<% else %>
-				<%= f.collection_select :actor_ids, Actor.all, :id, :name, { include_blank: "Select an existing Actor/System"},{multiple: true,class: 'form-control'} %>
+				<%= f.collection_select :actor_ids, Actor.where('id NOT IN (?)',@request.actor_ids), :id, :name, { include_blank: "Select an existing Actor/System"},{class: 'form-control'} %>
 			<% end %>
 			<%= f.submit %>
 		<% end %> 
