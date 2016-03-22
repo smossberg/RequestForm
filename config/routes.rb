@@ -3,7 +3,13 @@ Rails.application.routes.draw do
 
 resources :actors
 
-resources :owners
+	patch 'add_owner', :action => :add_ownership_to_ownerable, :controller => :owners
+resources :owners do
+	patch 'add_owner', :action => :add_ownership_to_ownerable
+	member do
+		patch 'add_owner', :action => :add_ownership_to_ownerable
+	end
+end
   #get 'business_contexts/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -23,9 +29,10 @@ resources :owners
 resources :requests do
 	member do
 		patch 'add_actors', :action => :add_actors_to_request 
-		post 'add_owner', :action => :add_ownership, :controller => :owners
 	end
-	resource :business_context 
+	resource :business_context do
+		resources :owners
+	end	
 	resources :actors do
 		delete 'unlink',:on => :member,:controller => :requests, :action => :remove_actor_from_request 
 	end
@@ -36,6 +43,7 @@ resources :business_context do
 	resources :headings, only: [:new,  :edit, :show, :create, :destroy] do
 		resources :uploads, only: [:new, :index]
 	end
+	resources :owners
 end
 resources :headings, only: [:update] do
 	resources :uploads
