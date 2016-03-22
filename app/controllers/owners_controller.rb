@@ -13,13 +13,18 @@ class OwnersController < ApplicationController
 	end
 
 	def create
-		@ownerable = find_ownerable
+		@ownerable = find_context
 		@owner = @ownerable.owners.create(owner_params)
 		if @owner.save 
 			render 'create'
 		else
 			render 'new'
 		end
+	end
+	def destroy
+		@ownerable = find_context
+		@owner = Owner.find(params[:id])
+		@ownerable.owners.delete(@owner)
 	end
 	def add_ownership
 		@owner = Owner.find(params[:id])
@@ -47,7 +52,7 @@ class OwnersController < ApplicationController
 		end		
 		def find_context
 			@klass = params[:ownerable_type].capitalize.constantize
-			@context = klass.find(params[:ownerable_id])
+			@context = @klass.find(params[:ownerable_id])
 		end
 
 end

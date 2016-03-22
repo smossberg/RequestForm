@@ -2,4 +2,5 @@
 					<td><b><%= owner.firstname %>	<%= owner.lastname %></b></td> 
 					<td><%= owner.email %> </td>
 					<td><%= owner.phone %></td>
+					<td><%= link_to 'X', owner_path(owner,:ownerable_type => ownerable.class.name,:ownerable_id => ownerable.id ,:owner => owner), method: :delete, remote: true %></td>
 </tr>

@@ -1,5 +1,7 @@
-<%= ownerable.name %>
+New <%= ownerable.class.name%> owner:
 <%= form_for [ownerable,Owner.new], remote: true do|f| %>
+	<%= hidden_field_tag :ownerable_type,  ownerable.class.name %>
+	<%= hidden_field_tag :ownerable_id , ownerable.id %>
 	<p>
 		<%= f.label :firstname %>
 		<%= f.text_field :firstname %>
@@ -10,6 +12,7 @@
 		<%= f.label :email%>
 		<%= f.email_field :email %>
 	</p>
+	<p>
 		<%= f.label :phone %>
 		<%= f.telephone_field :phone %>
 	</p>
