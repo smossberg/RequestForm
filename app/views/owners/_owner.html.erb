@@ -1,6 +1,7 @@
-<tr id="owner-id-<%= owner.id %>">
-					<td><b><%= owner.firstname %>	<%= owner.lastname %></b></td> 
-					<td><%= owner.email %> </td>
-					<td><%= owner.phone %></td>
-					<td><%= link_to '', owner_path(owner,:ownerable_type => ownerable.class.name,:ownerable_id => ownerable.id ,:owner => owner), class: 'glyphicon glyphicon-remove',method: :delete, remote: true %></td>
+<tr id="owner-id-<%= owner.id %>" class="padding-3">
+	<td><b><%= owner.firstname %></b></td>
+	<td><b>	<%= owner.lastname %></b></td> 
+	<td><%= owner.email %> </td>
+	<td><%= owner.phone %></td>
+	<td><%= link_to '', owner_path(owner,:ownerable_type => ownerable.class.name,:ownerable_id => ownerable.id ,:owner => owner), class: 'glyphicon glyphicon-remove',method: :delete, remote: true %></td>
 </tr>
