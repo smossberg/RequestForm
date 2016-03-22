@@ -60,10 +60,16 @@ class ActorsController < ApplicationController
   end
   
   def edit
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+	end
 	@actor = Actor.find(params[:id])
 	@disable_nav = true
   end 
   def update
+	if (params.has_key?(:request_id))
+		@request = Request.find(params[:request_id])
+	end
 	@actor = Actor.find(params[:id])
 	if @actor.update(actor_params)
 	end

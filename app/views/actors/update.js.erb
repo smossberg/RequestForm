@@ -1,4 +1,3 @@
-//$('#actors').html("<%= j (render @actor) %>");
-$('div[actor-id="<%= @actor.id %>"]').replaceWith("<%= j (render @actor) %>");
+$('div[actor-id="<%= @actor.id %>"]').replaceWith("<%= j (render @actor,request_id: @request.id, unlink: true) %>");
 $('#actor-form').slideUp(350);
 

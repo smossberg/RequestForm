@@ -1,24 +1,38 @@
-<%= form_for @actor, html: {class: 'form-horizontal'}, url: actor_path(@actor), remote: true do |f| %>
-
-	<div class="field form-group">
-		<%= f.label :name , class: 'col-sm-1 control-label' %>
-		<div class="col-sm-4">
-			<%= f.text_field :name, class: 'form-control' %>
-		</div>
+<div actor-id="<%= @actor.id %>">
+	<div class="col-xs-12 col-sm-4">
+		<%= form_for @actor, html: {class: 'form-horizontal'}, url: actor_path(@actor, request_id: @request.id), remote: true do |f| %>
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-10">
+							<%= f.text_field :name, class: 'form-control' %>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="field form-group">
+						<div class="col-sm-4">
+							<%= f.label :platform , class: 'col-sm-1 control-label' %>
+						</div>
+						<div class="col-sm-8">
+							<%= f.text_field :platform, class: 'form-control' %>
+						</div>
+					</div>
+					<div class="field form-group">
+						<div class="col-sm-4">
+							<%= f.label :protocol , class: 'col-sm-1 control-label' %>
+						</div>
+						<div class="col-sm-8">
+							<%= f.text_field :protocol, class: 'form-control' %>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="col-sm-1 col-sm-offset-4">
+						<%= f.submit 'Save', class: 'btn btn-primary' %>
+					</div>
+				</div>
+			</div>
+		<% end %>
 	</div>
-	<div class="field form-group">
-		<%= f.label :platform , class: 'col-sm-1 control-label' %>
-		<div class="col-sm-4">
-			<%= f.text_field :platform, class: 'form-control' %>
-		</div>
-	</div>
-	<div class="field form-group">
-		<%= f.label :protocol , class: 'col-sm-1 control-label' %>
-		<div class="col-sm-3">
-			<%= f.text_field :protocol, class: 'form-control' %>
-		</div>
-	</div>
-	<div class="col-sm-1 col-sm-offset-4">
-		<%= f.submit 'Save', class: 'btn btn-primary' %>
-	</div>
-<% end %>
+</div>
