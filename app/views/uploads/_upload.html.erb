@@ -9,7 +9,7 @@
 				<% end%>
 
 				<% if upload.attachment.content_type.include? "image" %>
-					<%=link_to (image_tag (upload.attachment.url(:original)),:alt => upload.name, :class => "img-thumbnail thumbnail inline", :style => "max-width:100%, max-height:100%, display:block"), upload.attachment.url(:original, false)%>
+					<%=link_to (image_tag (upload.attachment.url(:original)),:alt => upload.name, :class => "img-thumbnail thumbnail inline", :style => "max-width:100%, max-height:100%, display:block"), upload.attachment.url(:original, false), :rel => "lightbox[imagesetname]"%>
 				<% else %>
 					<%=link_to (image_tag 'doc-icon.png',:alt => upload.name, :class => "img-thumbnail thumbnail inline", :style => "width:100px, height:100px"), upload.attachment.url(:original, false)%>
 				<% end %>

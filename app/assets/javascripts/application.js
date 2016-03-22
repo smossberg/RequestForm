@@ -20,4 +20,5 @@
 //= require jquery_nested_form
 //= require jquery-fileupload/basic
 //= require tinymce
+//= require lightbox
 //= require_tree .
