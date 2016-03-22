@@ -26,9 +26,8 @@
 		<div class="col-sm-8 ">
 			<h3>Project Stakeholders</h3>
 			<table id="owners">
-				<%= render @request.owners, ownerable: @request %>
+				<%= render @request.owners, ownerable: @request, :small_owner => true, :removeable => true %>
 			</table>
-			<h4>new</h4>
 			<%= render 'owners/form', ownerable: @request  %>
 		</div>
 	</div>
