@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321124222) do
+ActiveRecord::Schema.define(version: 20160330063932) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -57,9 +57,11 @@ ActiveRecord::Schema.define(version: 20160321124222) do
     t.text     "objective"
     t.string   "size"
     t.string   "security"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "request_id"
+    t.boolean  "master_data"
+    t.string   "frequency"
   end
 
   add_index "flows", ["request_id"], name: "index_flows_on_request_id"

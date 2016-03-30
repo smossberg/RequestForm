@@ -26,13 +26,29 @@
             <br>
           </div>
           <div class="col-sm-6">
-            <h4 class="text-muted">Message</h4>
-            <div class="col-sm-4">
-              <b>Size:</b> <%= flow.size %>
-            </div>
-            <div class="col-sm-4">
-              <b>Security:</b> <%= flow.security %>
-            </div>
+		  <div class="row">
+		    <h4 class="text-muted">Message</h4>
+		    <div class="col-sm-4">
+		      <b>Size:</b> <%= flow.size %>
+		    </div>
+		    <div class="col-sm-4">
+		      <b>Security:</b> <%= flow.security %>
+		    </div>
+		    <div class="col-sm-4">
+	    <b>Master data?:</b>
+	    <% if flow.master_data == true %>
+		    Yes
+	    <% else %>
+			No
+		<% end %>
+		    </div>
+	    </div><br>
+			<div class="row">
+				<div class="col-sm-12">
+				   <b>Message Frequency:</b><br>
+				   <%= flow.frequency %>
+				</div>
+			</div>
           </div>
           <div class="col-sm-3 ">
             <h4 class="text-muted">Consumer(s)</h4>
