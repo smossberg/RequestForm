@@ -11,7 +11,7 @@
 						<div class="row">
 							<div class="col-sm-10 col-sm-offset-2">
 								<span class="text-muted">Ownership:</span>
-								<table id="owners" class="col-sm-10">
+								<table id="owners" class="">
 									<%= render @bc.owners , :ownerable => @bc, :removeable => true%>
 								</table>
 								<%= render 'owners/existing_owners', :ownerable => @bc, :request => @request %>

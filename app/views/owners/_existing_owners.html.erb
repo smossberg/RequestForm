@@ -1,13 +1,15 @@
 
-<div class="row">
-	<div class="col-sm-8">
-		<%= form_for :owner, :url => add_owner_path(:ownerable_type => ownerable.class.name, :ownerable_id => ownerable.id ),method: :patch, remote: true do |f| %>
-			<% if ownerable.owners.nil? %>
-				<%= f.collection_select :owner_ids, Owner.where('id NOT IN (?)',ownerable.owner_ids), :id, :firstname, { },{multiple: true,class: 'form-control'} %>
-			<% else %>
-				<%= f.collection_select :owner_ids, request.owners.where.not(id: ownerable.owner_ids), :id, :firstname, { },{class: 'form-control'} %>
-			<% end %>
-			<%= f.submit 'Add ownership', class: 'btn btn-default' %>
-		<% end %> 
-	</div>				
+<div id="existing-owner-form">
+	<div class="row">
+		<div class="col-sm-8">
+			<%= form_for :owner, :url => add_owner_path(:ownerable_type => ownerable.class.name, :ownerable_id => ownerable.id ),method: :patch, remote: true do |f| %>
+				<% if ownerable.owners.nil? %>
+					<%= f.collection_select :owner_ids, Owner.where('id NOT IN (?)',ownerable.owner_ids), :id, :firstname, { },{multiple: true,class: 'form-control'} %>
+				<% else %>
+					<%= f.collection_select :owner_ids, request.owners.where.not(id: ownerable.owner_ids), :id, :firstname, { },{class: 'form-control'} %>
+				<% end %>
+				<%= f.submit 'Add ownership', class: 'btn btn-default' %>
+			<% end %> 
+		</div>				
+	</div>		
 </div>		

@@ -1,7 +1,8 @@
-<% ownerable = @ownerable %>
+<%# ownerable = @ownerable %>
 <% if local_assigns.has_key? :removeable %>
-	$("#owners").replaceWith("<%= j (render owners, ownerable: ownerable, removeable: true) %>");
+	$("#owners").html("<%= j (render owners, ownerable: ownerable, removeable: true) %>");
 <% else %>
 	
-	$("#owners").replaceWith("<%= j (render owners, ownerable: ownerable, removeable: true) %>");
+	$("#owners").html("<%= j (render owners, ownerable: ownerable, removeable: true) %>");
 <% end %>
+$("#existing-owner-form").replaceWith("<%= j (render 'owners/existing_owners',:ownerable => @ownerable, :request => @request )%>");

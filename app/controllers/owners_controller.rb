@@ -25,9 +25,12 @@ class OwnersController < ApplicationController
 		@ownerable = find_context
 		@owner = Owner.find(params[:id])
 		@ownerable.owners.delete(@owner)
+		@request = @ownerable.request
+			render 'owners/destroy', locals: {owners: @ownerable.owners, ownerable: @ownerable}
 	end
 	def add_ownership_to_ownerable
 		@ownerable = find_context
+		@request = @ownerable.request
 		
 		owner_ids = params[:owner][:owner_ids]
 #		owner_ids = owner_ids.reject { |c| c.empty?}
@@ -36,7 +39,7 @@ class OwnersController < ApplicationController
 
 		if @ownerable.owners << @owners
 			logger.info "Lade till #{owner_ids} till ownerable"
-			render 'owners/added_owners', locals: {owners: @ownerable.owners}
+			render 'owners/added_owners', locals: {owners: @ownerable.owners, ownerable: @ownerable}
 		end
 		
 	end
