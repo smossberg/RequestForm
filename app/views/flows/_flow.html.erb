@@ -19,10 +19,14 @@
         </header>
         <div class="panel-body">
           <div class="col-sm-3 ">
-            <h4 class="text-muted">Provider(s)</h4>
-              <% flow.providers.each do |f|%>
-                <p><%= link_to f.name, request_actor_path(@request, f) %></p>
-              <% end %>
+		  <h4 class="text-muted">Provider(s)</h4>
+		  <table id="providers-table">
+		    <% flow.providers.each do |f|%>
+				    <tr>
+					    <td><p><%= link_to f.name, request_actor_path(@request, f) %></p></td><td><p> :  <%= f.protocol %></p></td>
+				    </tr>
+				<% end %>
+		</table>
             <br>
           </div>
           <div class="col-sm-6">
@@ -52,9 +56,13 @@
           </div>
           <div class="col-sm-3 ">
             <h4 class="text-muted">Consumer(s)</h4>
-              <% flow.consumers.each do |f|%>
-                <p><%= link_to f.name, request_actor_path(@request, f) %></p>
+	    	<table id="consumers-table">
+			<% flow.consumers.each do |f|%>
+				<tr>
+			                <td><p><%= link_to f.name, request_actor_path(@request, f) %></p></td><td><p> : <%= f.protocol %> </p></td>
+				</tr>
               <% end %>
+      </table>
             <br>
           </div>
 			  </div>
