@@ -1,2 +1,2 @@
-$('#owners').append(' <%= j (render @owner, :ownerable => @ownerable ) %> ');
+$('#owners').append(' <%= j (render @owner, :ownerable => @ownerable, :small_owner => false, :removeable => true ) %> ');
 $('#new_owner').trigger("reset");
