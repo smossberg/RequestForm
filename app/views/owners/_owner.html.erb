@@ -2,7 +2,7 @@
 	<td><b><%= owner.firstname %></b></td>
 	<td><b>	<%= owner.lastname %></b></td> 
 	<% if local_assigns.has_key? :small_owner %>
-		<td><%= owner.email %> </td>
+		<td><a href="mailto:<%= owner.email %>"><%= owner.email %></a></td>
 		<td><%= owner.phone %></td>
 	<% end %>
 	<% if local_assigns.has_key? :removeable %>

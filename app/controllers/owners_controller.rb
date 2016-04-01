@@ -24,9 +24,17 @@ class OwnersController < ApplicationController
 	def destroy
 		@ownerable = find_context
 		@owner = Owner.find(params[:id])
-		@ownerable.owners.delete(@owner)
-		@request = @ownerable.request
-			render 'owners/destroy', locals: {owners: @ownerable.owners, ownerable: @ownerable}
+		owner_ids = params[:id]
+		if @ownerable.class.name == "Request"
+			@request = @ownerable
+			@request.owners.delete(@owner)
+			@request.business_context.owners.delete(@owner)
+		else 
+			@request = @ownerable.request
+			if @ownerable.owners.delete(@owner)
+				render 'owners/destroy', locals: {owners: @ownerable.owners, ownerable: @ownerable, request: @request}
+			end
+		end
 	end
 	def add_ownership_to_ownerable
 		@ownerable = find_context

@@ -1,2 +1,2 @@
 $('#owner-id-<%=  @owner.id  %>').remove();
-$("#existing-owner-form").replaceWith("<%= j (render 'owners/existing_owners',:ownerable => @ownerable, :request => @request )%>");
+$("#existing-owner-form").replaceWith("<%= j (render 'owners/existing_owners',ownerable: @ownerable, :request => @request)%>");

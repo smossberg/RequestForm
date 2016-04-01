@@ -3,28 +3,26 @@
 		New <%= ownerable.class.name%> owner
 	</div>
 	<div class="panel-body">
-<%= form_for [ownerable,Owner.new], remote: true do|f| %>
-	<%= hidden_field_tag :ownerable_type,  ownerable.class.name %>
-	<%= hidden_field_tag :ownerable_id , ownerable.id %>
-	<p>
-		<%= f.label :firstname %>
-		<%= f.text_field :firstname %>
-		<%= f.label :lastname %>
-		<%= f.text_field :lastname %>
-	</p>
-	<p>
-		<%= f.label :email%>
-		<%= f.email_field :email %>
-	</p>
-	<p>
-		<%= f.label :phone %>
-		<%= f.telephone_field :phone %>
-	</p>
-	</div>
-	<div class="panel-footer">
+	<%= form_for [ownerable,Owner.new], remote: true do|f| %>
+		<%= hidden_field_tag :ownerable_type,  ownerable.class.name %>
+		<%= hidden_field_tag :ownerable_id , ownerable.id %>
+		<p>
+			<%= f.label :firstname %>
+			<%= f.text_field :firstname %>
+			<%= f.label :lastname %>
+			<%= f.text_field :lastname %>
+		</p>
+		<p>
+			<%= f.label :email%>
+			<%= f.email_field :email %>
+		</p>
+		<p>
+			<%= f.label :phone %>
+			<%= f.telephone_field :phone %>
+		</p>
 		<%= f.submit 'Add', class: 'btn btn-primary' %>
 	
-	</div>
+		<% end %>
+</div>
 
-<% end %>
 
